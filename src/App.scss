@@ -1,0 +1,37 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+// @font-face {
+//   font-family: 'Chewy';
+//   src: local('Chewy'),
+//        url('./Styles-Elements/Fonts/Chewy.ttf') format('ttf');
+// }
+
+:root {
+  --whiteGray: #F5F6F9;
+  --lightPurple: #EDE6FC;
+  --darkPurple: #4A0FA3;
+  --lightGray: #D9D9D9;
+  --darkGray: #8F8F8F;
+  --nightPurple: #261052;
+  --brightGreen: #73E0A7;
+  --mainLight: #FEFEFE;
+  --lightGreen: #d9fbf1;
+  --sharpGreen: #00E4A2;
+  --nightGray: #373737;
+  --lightRed: #EB5757;
+  --darkPurpleGray: #757478;
+  --softGray: #F1F1F1;
+}
+
+/* Color modifications for the SVG images */
+.filter-night-purple {
+  filter: invert(5%) sepia(70%) saturate(3816%) hue-rotate(256deg) brightness(129%) contrast(100%);
+}
+
+.filter-dark-purple-gray {
+  filter: invert(46%) sepia(5%) saturate(215%) hue-rotate(214deg) brightness(99%) contrast(93%);
+}
+
+
+
