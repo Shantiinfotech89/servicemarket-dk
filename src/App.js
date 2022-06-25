@@ -1,7 +1,8 @@
-import { Routes, BrowserRouter as Router } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.scss';
 
-// import LoginSignup from './pages/login-signup/LoginSignup'
+import LogIn from './Components/Auth/LogIn/LogIn';
 
 
 function App() {
@@ -9,8 +10,9 @@ function App() {
   return (
   <Router>
       <Routes>
-        {/* <Route exact path="/" render={(props) => <LoginSignup {...props} />} /> */}
-        
+         <Route exact path="/" element={<LogIn/>} />
+         {/*<Route exact path="/" render={(props) => <LogIn {...props} />} />*/}
+
       </Routes>
   </Router>)
 }
