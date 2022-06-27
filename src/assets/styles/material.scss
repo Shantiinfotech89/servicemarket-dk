@@ -1,0 +1,41 @@
+.textfield{
+    margin: 0 0 24px 0 !important;
+    width: 100%;
+    .MuiInputBase-formControl{
+        border-radius: 8px !important;
+        background-color: var(--white) !important;
+    }
+    .MuiFormLabel-colorPrimary{
+        color: rgba(128, 128, 128, 1);
+        font-size: 14px;
+        line-height: 24px;
+        &.Mui-focused{
+            color: rgba(0, 180, 189, 1);
+            font-size: 12px;
+        }
+        &.MuiFormLabel-filled {
+            font-size: 12px;
+        }
+    }
+    .MuiInputLabel-asterisk{
+        color: rgba(206, 21, 0, 1);
+    }
+    .MuiInputBase-formControl::before{
+        height: 54px;
+        border-radius: 8px !important;
+        border: 1px solid var(--graybb) !important;
+    }
+    .MuiInputBase-formControl::after{
+        height: 52px;
+        border-radius: 8px !important;
+        border: 2px solid var(--primary);
+    }
+}
+.form-group{
+    position: relative;
+    .ipnputlabel{
+        margin: 2px 0 4px 0 !important;
+        position: absolute;
+        bottom: 0px;
+    }
+}

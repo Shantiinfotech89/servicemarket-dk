@@ -70,7 +70,7 @@ ButtonProvider.defaultProps = {
 /**
  * Represents a Semibold button with
  * font size: 16px
- * font name: Open Sans
+ * font name: Muli
  * font weight: Semibold
  * background color: Primary
  * padding: 16px 40px
@@ -100,7 +100,7 @@ export function PrimaryLarge(props) {
 /**
  * Represents a Semibold button with
  * font size: 14px
- * font name: Open Sans
+ * font name: Muli
  * font weight: Semibold
  * background color: Primary
  * padding: 8px 16px
@@ -109,7 +109,6 @@ export function PrimarySmall(props) {
     return <ButtonProvider
     fontSize = { props.fontSize }
     fontWeight = { props.fontWeight }
-    fontSize = { '14px' }
     padding = { '8px 16px' }
     margin = { props.margin }
     flexGrow = { props.flexGrow }
@@ -132,7 +131,7 @@ export function PrimarySmall(props) {
 /**
  * Represents a Semibold button with
  * font size: 16px
- * font name: Open Sans
+ * font name: Muli
  * font weight: Semibold
  * background color: Primary
  * padding: 16px 40px
@@ -162,7 +161,7 @@ export function PrimaryOutlineLarge(props) {
 /**
  * Represents a Semibold button with
  * font size: 14px
- * font name: Open Sans
+ * font name: Muli
  * font weight: Semibold
  * background color: Primary
  * padding: 16px 40px

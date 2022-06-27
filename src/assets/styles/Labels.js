@@ -16,7 +16,7 @@ export const LabelWrapper = styled.div`
   transition: transform .2s ease-in-out;
   &::after {
     content: '';
-    padding-right: 20px;
+   
   }
 
   ::-webkit-scrollbar {
@@ -75,7 +75,7 @@ LabelProvider.defaultProps = {
 /**
  * Represents a div with
  * font size: 40px
- * font name: Open Sans
+ * font name: Muli
  * font weight: Bold
  */
 export function Heading1B(props) {
@@ -101,7 +101,7 @@ export function Heading1B(props) {
 /**
  * Represents a div with
  * font size: 36px
- * font name: Open Sans
+ * font name: Muli
  * font weight: Bold
  */
 export function Heading2B(props) {
@@ -127,7 +127,7 @@ export function Heading2B(props) {
 /**
  * Represents a div with
  * font size: 24px
- * font name: Open Sans
+ * font name: Muli
  * font weight: Bold
  */
 export function Heading3B(props) {
@@ -153,7 +153,7 @@ export function Heading3B(props) {
 /**
  * Represents a div with
  * font size: 20px
- * font name: Open Sans
+ * font name: Muli
  * font weight: Bold
  */
 export function Heading4B(props) {
@@ -179,7 +179,7 @@ export function Heading4B(props) {
 /**
  * Represents a div with
  * font size: 18px
- * font name: Open Sans
+ * font name: Muli
  * font weight: SemiBold
  */
  export function Heading5B(props) {
@@ -205,7 +205,7 @@ export function Heading4B(props) {
 /**
  * Represents a div with
  * font size: 16px
- * font name: Open Sans
+ * font name: Muli
  * font weight: SemiBold
  */
 export function Heading6S(props) {
@@ -231,7 +231,7 @@ export function Heading6S(props) {
 /**
  * Represents a div with
  * font size: 14px
- * font name: Open Sans
+ * font name: Muli
  * font weight: Regular
  */
 export function Body(props) {
@@ -256,8 +256,8 @@ export function Body(props) {
 
 /**
  * Represents a div with
- * font size: 14px
- * font name: Open Sans
+ * font size: 12px
+ * font name: Muli
  * font weight: Regular
  */
  export function InputLabel(props) {
@@ -283,7 +283,7 @@ export function Body(props) {
 /**
  * Represents a div with
  * font size: 14px
- * font name: Open Sans
+ * font name: Muli
  * font weight: Regular
  */
 export function Link(props) {
@@ -309,7 +309,7 @@ export function Link(props) {
 /**
  * Represents a div with
  * font size: 12px
- * font name: Open Sans
+ * font name: Muli
  * font weight: Regular
  */
 export function Small(props) {
@@ -335,7 +335,7 @@ export function Small(props) {
 /**
  * Represents a div with
  * font size: 12px
- * font name: Open Sans
+ * font name: Muli
  * font weight: Regular
  */
 export function Error(props) {

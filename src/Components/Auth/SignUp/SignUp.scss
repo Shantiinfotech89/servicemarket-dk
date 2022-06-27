@@ -1,0 +1,58 @@
+.auth-holder{
+    .auth-top-logo{
+        width: 144px;
+        height: 90px;
+        margin-bottom: 30px;
+    }
+    .auth-box{
+        width: 420px;
+        text-align: center;
+    }
+    .auth-box-bottom{
+        margin-bottom: 20px;
+    }
+}
+
+.user-service-holder{
+    .user-box{
+        margin-bottom: 20px;
+        .user-box-label{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            background: var(--white);
+            box-shadow: 0px 0px 12px rgba(162, 162, 162, 0.16);
+            border-radius: 8px;
+            padding: 12px 20px;
+            cursor: pointer;
+        }
+        input[type="radio"] ~ .user-box-label{
+            background-color: var(--white);
+        }
+        input[type="radio"]:checked ~ .user-box-label{
+            background-color: var(--primary);
+            box-shadow: 0px 0px 12px rgba(0, 180, 189, 0.16);
+            .ubl-h4{
+                color: var(--white);
+            }
+            .ubl-body{
+                color: var(--white);
+            }
+            .ush-nab-icon{
+                filter: invert(99%) sepia(1%) saturate(4576%) hue-rotate(324deg) brightness(126%) contrast(97%);
+            }
+        }
+        input[type="radio"]{
+            position: absolute;
+            top: -9999999;
+            filter: alpha(opacity=0);
+            opacity: 0;
+            width:0;
+            height:0;
+            outline: none;
+            cursor: inherit;
+        }
+        
+    }
+}
