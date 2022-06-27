@@ -1,20 +1,33 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import {Switch, Route, BrowserRouter as Router} from 'react-router-dom'
 import './App.scss';
+import './assets/styles/material.scss';
 
-import LogIn from './Components/Auth/LogIn/LogIn';
-
+import SignUp from './Components/Auth/SignUp/SignUp';
+import FirstStep from './Components/Auth/SignUp/SignUpFirstStep/FirstStep';
+import SecondStep from './Components/Auth/SignUp/SignUpSecondStep/SecondStep';
+// const theme = createMuiTheme({
+//   typography: {
+//     fontFamily: [
+//       'Muli',
+//     ].join(','),
+//   },});
 
 function App() {
 
-  return (
-  <Router>
-      <Routes>
-         <Route exact path="/" element={<LogIn/>} />
-         {/*<Route exact path="/" render={(props) => <LogIn {...props} />} />*/}
 
-      </Routes>
-  </Router>)
+  return (
+   
+      <Router>
+        <Switch>
+          <Route exact path="/signup" render={(props) => <SignUp {...props} />} />
+          <Route exact path="/signup2" render={(props) => <FirstStep {...props} />} />
+          <Route exact path="/signup3" render={(props) => <SecondStep {...props} />} />
+        </Switch>
+      </Router>
+    
+    )
 }
  
 export default App;

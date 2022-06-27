@@ -2,52 +2,45 @@
 
 /**
  * Size: 40px
- * Font style: Open Sans
+ * Font style: Muli
  * Weight: Bold
  */
 export const Heading1B = 'heading1B'
 
 /**
  * Size: 36px
- * Font style: Open Sans
+ * Font style: Muli
  * Weight: Bold
  */
 export const Heading2B = 'heading2B'
 
 /**
  * Size: 24px
- * Font style: Open Sans
+ * Font style: Muli
  * Weight: Bold
  */
 export const Heading3B = 'heading3B'
 
 /**
  * Size: 20px
- * Font style: Open Sans
+ * Font style: Muli
  * Weight: Bold
  */
 export const Heading4B = 'heading4B'
 
 /**
  * Size: 18px
- * Font style: Open Sans
+ * Font style: Muli
  * Weight: SemiBold
  */
 export const Heading5B = 'heading5B'
 
 /**
  * Size: 16px
- * Font style: Open Sans
+ * Font style: Muli
  * Weight: SemiBold
  */
 export const Heading6S = 'heading6S'
-
-/**
- * Size: 16px
- * Font style: Open Sans
- * Weight: SemiBold
- */
-export const Button = 'Button'
 
 /**
  * Size: 14px
@@ -77,7 +70,7 @@ export const error = 'error'
 
 
 export function getFontFamily(fontStyle) {
-    return 'Open Sans'
+    return 'Muli'
 }
 
 
@@ -95,12 +88,10 @@ export function getFontSize(fontStyle) {
             return '16px'
         case Heading6S:
             return '16px'
-        case Button:
-            return '16px'
         case Body:
             return '14px'
         case InputLabel:
-            return '14px'
+            return '12px'
         case small:
             return '12px'
         case error:
@@ -124,8 +115,6 @@ export function getFontWeight(fontStyle) {
             return '600'
         case Heading6S:
             return '400'
-        case Button:
-            return '600'
         case Body:
             return '400'
         case InputLabel:
