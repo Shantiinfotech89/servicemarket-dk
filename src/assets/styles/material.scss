@@ -1,6 +1,6 @@
 .textfield{
     margin: 0 0 24px 0 !important;
-    width: 100%;
+    width: 100% !important;
     .MuiInputBase-formControl{
         border-radius: 8px !important;
         background-color: var(--white) !important;
@@ -31,6 +31,117 @@
         border: 2px solid var(--primary);
     }
 }
+.selectfield{
+    margin: 0 0 24px 0 !important;
+    width: 100% !important;
+    border-radius: 8px;
+    .MuiInputBase-formControl{
+        border-radius: 8px !important;
+        background-color: var(--white) !important;
+    }
+    .MuiFormLabel-colorPrimary{
+        color: rgba(128, 128, 128, 1);
+        font-size: 14px;
+        line-height: 24px;
+        &.Mui-focused{
+            color: rgba(0, 180, 189, 1);
+            font-size: 12px;
+        }
+        &.MuiFormLabel-filled {
+            font-size: 12px;
+        }
+    }
+    .MuiInputLabel-asterisk{
+        color: rgba(206, 21, 0, 1);
+    }
+    .MuiInputBase-formControl::before{
+        height: 54px;
+        border-radius: 8px !important;
+        border: 1px solid var(--graybb) !important;
+    }
+    .MuiInputBase-formControl::after{
+        height: 52px;
+        border-radius: 8px !important;
+        border: 2px solid var(--primary);
+    } 
+    .MuiSelect-filled{
+        text-align: left;
+    }
+    .MuiInputBase-colorPrimary{
+        &.Mui-focused{
+            background-color: var(--white) !important;
+        }
+    }
+    .MuiSelect-select{
+        padding-top: 24px !important;
+        border-radius: 8px !important;
+        padding-bottom: 8px;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 600;
+        background-color: transparent !important;
+        [data-testid="CheckIcon"]{
+            display: none;
+        }
+    }
+    .MuiOutlinedInput-root{
+        &:hover{
+            .MuiOutlinedInput-notchedOutline{
+                border-color: var(--graybb) !important;
+            }
+        }
+        &.Mui-focused{
+            .MuiOutlinedInput-notchedOutline{
+                border-color: var(--primary) !important;
+            }
+        }
+    }
+    
+    .MuiOutlinedInput-notchedOutline{
+        top: 0px;
+        legend{
+            display: none;
+        }
+    }
+}
+.MuiPopover-paper, .MuiAutocomplete-paper{
+    border: 1px solid var(--graybb) !important;
+    .MuiList-padding{
+        padding: 0 0 !important;
+        .MuiMenuItem-root{
+            padding: 14px 20px !important;
+            border-bottom: 1px solid var(--graybb) !important;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 14px !important;
+            color: var(--secondary) !important;
+            &:hover{
+                background-color: transparent !important;
+            }
+            &:last-child{
+                border-bottom: none !important;
+            }
+            [data-testid="CheckIcon"]{
+                display: none;
+            }
+            &.Mui-selected{
+                background-color: transparent !important;
+                [data-testid="CheckIcon"]{
+                    color: var(--primary);
+                    display: flex;
+                }
+                color: var(--black1d) !important;
+            }
+            .MuiCheckbox-colorPrimary{
+                padding: 0px 10px 0px 0px;
+            }
+        }
+    }
+}
+.Mui-checked{
+    color: var(--primary) !important;
+}
 .form-group{
     position: relative;
     .eye-icon{
@@ -44,13 +155,6 @@
         bottom: 0px;
     }
 }
-
-
-
-
-
-
-
 // modal css
 .maxwidth430{
   max-width: 430px !important;
@@ -100,4 +204,74 @@
       }
     }
   }
+}
+.react-tel-input {
+    .form-control{
+        border: 1px solid var(--graybb) !important;
+        border-radius: 8px !important;
+        height: 55px !important;
+        width: 100% !important;
+        color: var(--black1d) !important;
+        font-family: 'Muli';
+        padding-left: 96px !important;
+    }
+    .flag-dropdown{
+        background-color: var(--graye8) !important;
+        border: 1px solid var(--graybb) !important;
+        border-radius: 8px 0 0 8px !important;
+        .selected-flag{
+            width: 80px !important;
+            height: 100% !important;
+            padding: 0 0 0 16px !important;
+            border-radius: 8px 0 0 8px !important;
+            .arrow{
+                left: 30px;
+                width: 0;
+                height: 0;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-top: 6px solid var(--blue00);
+            }
+        }
+    }
+    .country-list{
+        width: 320px !important;
+        max-height: 120px !important;
+        margin: 2px 0 10px 0px !important;
+        text-align: left !important;
+        border-radius: 8px !important;
+        border: 1px solid var(--graybb) !important;
+        .country{
+            padding: 12px 20px !important;
+            .flag{
+                margin-right: 20px;
+                margin-top: 0px;
+            }
+            .country-name{
+                color: var(--secondary) !important;
+            }
+            .dial-code{
+                color: var(--secondary) !important;
+            }
+            &.highlight{
+                position: relative;
+                background-color: transparent !important;
+                &::after{
+                    content: '';
+                    width: 24px;
+                    height: 24px;
+                    position: absolute;
+                    background: url(../images/structure/check-green.svg);
+                    right: 12px;
+                    top: 12px;
+                }
+                .country-name{
+                    color: var(--black1d) !important;
+                }
+                .dial-code{
+                    color: var(--black1d) !important;
+                }
+            }
+        }
+    }
 }

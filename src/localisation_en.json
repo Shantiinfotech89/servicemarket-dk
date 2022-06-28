@@ -18,44 +18,6 @@
   "loginToSM":"Login to SM",
   "welcomeBackEnterYourEmailAddressAndPassword" :"Welcome back ! Enter your email address and password.",
   "back": "Back",
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   "companyDetails": "Company details",
   "Login": "Login",
   "forgotPassword": "Forgot Password",
@@ -83,9 +45,19 @@
   "youCanChangeYourNewPhoneNoHere": "You can change your new phone no. here",
   "areYouSureYouWantToDeleteThisService": "Are you sure you want to delete this service?",
   "yes": "Yes",
-  "no": "No"
-
-
-
+  "no": "No",
+  "companyDetails": "Company details",
+  "checkYourEmailForACode": "Check your email for a code",
+  "weHaveSentA6CharacterCodeTo": "We’ve sent a 6-character code to",
+  "theCodeExpires": "The code expires",
+  "shortlySoPleaseEnterItSoon": "shortly, so please enter it soon.",
+  "verify": "Verify",
+  "cantFindYourCode": "Can’t find your code?",
+  "checkYourSpamFolder": "Check your spam folder!",
+  "resendCode": "Resend Code",
+  "iAgreeTo": "I agree to",
+  "termsAndConditions": "Terms and Conditions"
+  
+  
 
 }
