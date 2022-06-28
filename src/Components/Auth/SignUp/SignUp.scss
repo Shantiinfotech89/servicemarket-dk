@@ -58,4 +58,44 @@
         }
         
     }
+    .otp-ipt-grp1{
+        border: 1px solid var(--graybb);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: auto;
+        margin: 0 10px;
+    }
+    .otp-ipt-grp2{
+        border: 1px solid var(--graybb);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: auto;
+        margin: 0 10px;
+    }
+    .otp-input{
+        width: 8px;
+        height: 16px;
+        border: none;
+        border-right: 1px solid var(--graybb);
+        border-radius: 8px 0px 0px 8px;
+        text-align: center;
+        font-family: 'Muli';
+        font-size: 14px;
+        outline: none;
+        padding: 20px 28px;
+        &:last-child{
+            border-right: none;
+            border-radius: 0px 8px 8px 0px;
+        }
+    }
+    .width410{
+        width: 410px;
+    }
+    .text-underline{
+        text-decoration: underline;
+    }
 }

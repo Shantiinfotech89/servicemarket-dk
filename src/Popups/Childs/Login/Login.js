@@ -1,6 +1,6 @@
 // Styles Imports
 import * as Colors from '../../../assets/styles/Colors';
-import {  Heading2B, InputLabel, Body } from '../../../assets/styles/Labels';
+import {  Heading2B, LabelInput, Body } from '../../../assets/styles/Labels';
 // Scss Imports
 import './Login.scss';
 import * as React from 'react';
@@ -72,11 +72,11 @@ return (
                 placeholder="Enter Here"
                 required
               />
-              <InputLabel className="ipnputlabel" color={Colors.error} text={strings.enterAValidEmailAddress}></InputLabel>
+              <LabelInput className="ipnputlabel" color={Colors.error} text={strings.enterAValidEmailAddress}></LabelInput>
             </Box>
             <Box className="form-group">
               <FormControl variant="filled">
-                 <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
+                 <LabelInput htmlFor="standard-adornment-password">Password</LabelInput>
                  <Input
                    id="standard-adornment-password"
                    type={values.showPassword ? 'text' : 'password'}
