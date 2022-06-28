@@ -8,6 +8,7 @@ import SignUp from './Components/Auth/SignUp/SignUp';
 import FirstStep from './Components/Auth/SignUp/SignUpFirstStep/FirstStep';
 import SecondStep from './Components/Auth/SignUp/SignUpSecondStep/SecondStep';
 import ThirdStep from './Components/Auth/SignUp/SignUpThirdStep/ThirdStep';
+import Login from './Popups/Childs/Login/Login';
 
 function App() {
 
@@ -27,10 +28,11 @@ function App() {
           <Route exact path="/signup2" render={(props) => <FirstStep {...props} />} />
           <Route exact path="/signup3" render={(props) => <SecondStep {...props} />} />
           <Route exact path="/signup4" render={(props) => <ThirdStep {...props} />} />
+          <Route exact path="/Login" render={(props) => <Login {...props} />} />
         </Switch>
       </Router>
       </ThemeProvider>
     )
 }
- 
+
 export default App;
