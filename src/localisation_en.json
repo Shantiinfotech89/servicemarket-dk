@@ -15,8 +15,12 @@
   "enterAValidEmailAddress": "Enter a valid email address",
   "enterBasicDetail": "Enter basic detail",
   "pleaseFillInAllTheRequiredDetails": "Please fill in all the required details",
-
   "loginToSM":"Login to SM",
-  "welcomeBackEnterYourEmailAddressAndPassword" :"Welcome back ! Enter your email address and password."
+  "welcomeBackEnterYourEmailAddressAndPassword" :"Welcome back ! Enter your email address and password.",
+  "back": "Back",
+  "companyDetails": "Company details"
+  
+  
+
 
 }
