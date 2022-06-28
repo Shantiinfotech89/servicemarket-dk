@@ -9,6 +9,7 @@ export const graye8 = '#F8FAFC'
 export const grayef = '#EFF5F9'
 export const graybb = '#BBBABB'
 export const gray69 = '#696969'
+export const grayf8 = '#F8F8F8'
 export const blue12 = '#1264A3'
 
 

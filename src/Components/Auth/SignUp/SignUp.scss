@@ -7,6 +7,9 @@
     .auth-box{
         width: 420px;
         text-align: center;
+        &.ab-660{
+            width: 660px;
+        }
     }
     .auth-box-bottom{
         margin-bottom: 20px;

@@ -14,8 +14,11 @@
   "firstEnterYourEmail": "First enter your email",
   "enterAValidEmailAddress": "Enter a valid email address",
   "enterBasicDetail": "Enter basic detail",
-  "pleaseFillInAllTheRequiredDetails": "Please fill in all the required details"
+  "pleaseFillInAllTheRequiredDetails": "Please fill in all the required details",
+  "back": "Back",
+  "companyDetails": "Company details"
   
   
+
 
 }
