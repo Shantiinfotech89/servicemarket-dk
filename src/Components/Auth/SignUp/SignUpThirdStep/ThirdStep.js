@@ -1,7 +1,7 @@
 // Styles Imports
 import * as Colors from '../../../../assets/styles/Colors';
 import { PrimaryLarge, BackLarge } from '../../../../assets/styles/Buttons';
-import { Heading1B, LabelWrapper, Body } from '../../../../assets/styles/Labels';
+import { Heading1B, InputLabel, LabelWrapper, Body } from '../../../../assets/styles/Labels';
 // Scss Imports
 import './../SignUp.scss';
 // Images Imports
@@ -14,7 +14,7 @@ import Grid from '@mui/material/Grid';
 // local strings Imports
 const strings = require('../../../../localisation_en.json')
 
-function SecondStep(props) {
+function ThirdStep(props) {
 
 return (
 
@@ -23,39 +23,17 @@ return (
         <Grid item xs={6} pt={'60px'}>
           <div className="auth-box ab-660">
             <img src={authLogo} className="auth-top-logo" alt="" />
-            <Heading1B text={strings.enterBasicDetail} color={Colors.black1d} padding={'0 0 8px 0'} textAlign={'center'} />
+            <Heading1B text={strings.companyDetails} color={Colors.black1d} padding={'0 0 8px 0'} textAlign={'center'} />
             <LabelWrapper justifyContent={'center'} padding={'0 0 30px 0'} textAlign={'center'}>
               <Body text={strings.pleaseFillInAllTheRequiredDetails} color={Colors.black45} padding={'0 2px'} />
             </LabelWrapper>
             <div className="user-service-holder">
             <Grid container columnSpacing={2}>
-              <Grid item xs={6}>
-                  <Box className="form-group">
-                    <TextField
-                      className="textfield"
-                      label="Owner First Name"
-                      variant="filled"
-                      placeholder="Enter Here"
-                      required
-                    />
-                  </Box>
-              </Grid>
-              <Grid item xs={6}>
-                  <Box className="form-group">
-                    <TextField
-                      className="textfield"
-                      label="Owner Last Name"
-                      variant="filled"
-                      placeholder="Enter Here"
-                      required
-                    />
-                  </Box>
-              </Grid>
               <Grid item xs={12}>
                   <Box className="form-group">
                     <TextField
                       className="textfield"
-                      label="Business Name"
+                      label="Address"
                       variant="filled"
                       placeholder="Enter Here"
                       required
@@ -66,7 +44,7 @@ return (
                   <Box className="form-group">
                     <TextField
                       className="textfield"
-                      label="VAT No."
+                      label="Primary Category"
                       variant="filled"
                       placeholder="Enter Here"
                       required
@@ -77,7 +55,7 @@ return (
                   <Box className="form-group">
                     <TextField
                       className="textfield"
-                      label="Phone No."
+                      label="Secondary Category"
                       variant="filled"
                       placeholder="Enter Here"
                       required
@@ -88,7 +66,7 @@ return (
               
               <Box display={'flex'} alignItems={'center'} justifyContent={'space-between'} pt={'16px'}>
                 <BackLarge width={'140px'} text={strings.back} color={Colors.white} />
-                <PrimaryLarge width={'140px'} text={strings.continue} color={Colors.white} />
+                <PrimaryLarge width={'140px'} text={strings.signUp} color={Colors.white} />
               </Box>
             </div>
           </div>
@@ -99,4 +77,4 @@ return (
   )
 }
 
-export default SecondStep
+export default ThirdStep
