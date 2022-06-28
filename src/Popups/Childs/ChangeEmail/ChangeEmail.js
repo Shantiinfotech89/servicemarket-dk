@@ -1,6 +1,6 @@
 // Styles Imports
 import * as Colors from '../../../assets/styles/Colors';
-import {  Heading2B, InputLabel, Body } from '../../../assets/styles/Labels';
+import {  Heading2B, LabelInput, Body } from '../../../assets/styles/Labels';
 import { PrimaryLarge } from '../../../assets/styles/Buttons';
 
 // Images Imports
@@ -48,7 +48,7 @@ return (
                 placeholder="Enter Here"
                 required
               />
-              <InputLabel className="ipnputlabel" color={Colors.error} text={strings.enterAValidEmailAddress}></InputLabel>
+              <LabelInput className="ipnputlabel" color={Colors.error} text={strings.enterAValidEmailAddress}></LabelInput>
             </Box>
 
             <PrimaryLarge text={strings.submit} color={Colors.white} />
