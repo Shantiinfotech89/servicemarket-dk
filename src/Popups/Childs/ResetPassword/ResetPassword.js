@@ -1,6 +1,6 @@
 // Styles Imports
 import * as Colors from '../../../assets/styles/Colors';
-import {  Heading2B, InputLabel, Body } from '../../../assets/styles/Labels';
+import {  Heading2B, Body } from '../../../assets/styles/Labels';
 import { PrimaryLarge } from '../../../assets/styles/Buttons';
 
 // Images Imports
@@ -25,9 +25,12 @@ function Login(props) {
   const [values, setValues] = React.useState({
     showPassword: false,
   });
+  const [valuesConfirm, setValuesConfirm] = React.useState({
+    showPasswordConfirm: false,
+  });
   const [open, setOpen] = React.useState(false);
 
-  const loginPopupOpen = () => {
+  const resetPasswordPopupOpen = () => {
     setOpen(true);
   };
 
@@ -36,6 +39,7 @@ function Login(props) {
   };
   const handleChange = (prop) => (event) => {
     setValues({ ...values, [prop]: event.target.value });
+    setValuesConfirm({ ...values, [prop]: event.target.value });
   };
 
   const handleClickShowPassword = () => {
@@ -44,31 +48,28 @@ function Login(props) {
       showPassword: !values.showPassword,
     });
   };
+  const handleClickShowPasswordConfirm = () => {
+    setValuesConfirm({
+      ...valuesConfirm,
+      showPasswordConfirm: !valuesConfirm.showPasswordConfirm,
+    });
+  };
 return (
   <>
-      <Button variant="outlined" onClick={loginPopupOpen}>
-        Login
+      <Button variant="outlined" onClick={resetPasswordPopupOpen}>
+        {strings.resetPassword}
       </Button>
       <Dialog open={open} onClose={popupClose} className={'maxwidth470'}>
         <DialogContent>
           <img src={ModalClose} alt="..." className="modal-close" onClick={popupClose} />
-          <Heading2B text={strings.loginToSM} color={Colors.black1d}  margin={'0  0px 8px 0'} />
-          <Body text={strings.welcomeBackEnterYourEmailAddressAndPassword} color={Colors.black45} margin={'0  0px 30px 0'} />
+          <Heading2B text={strings.resetPassword} color={Colors.black1d}  margin={'0  0px 8px 0'} />
+          <Body text={strings.setYourNewPasswordHere} color={Colors.black45} margin={'0  0px 30px 0'} />
           <form>
+
             <Box className="form-group">
               <TextField
                 className="textfield"
-                label="Email id"
-                variant="filled"
-                placeholder="Enter Here"
-                required
-              />
-              <InputLabel className="ipnputlabel" color={Colors.error} text={strings.enterAValidEmailAddress}></InputLabel>
-            </Box>
-            <Box className="form-group">
-              <TextField
-                className="textfield"
-                label="password"
+                label={strings.newPassword}
                 variant="filled"
                 placeholder="Enter Here"
                 type={values.showPassword ? 'text' : 'password'}
@@ -84,12 +85,28 @@ return (
                 {values.showPassword ? <img src={VisibilityOff} alt=".." /> : <img src={Visibility} alt=".." />}
               </IconButton>
             </Box>
-            <Body text={strings.forgotPassword} color={Colors.gray61} textAlign={'right'} cursor={'pointer'} margin={'0px 0px 24px 0px'} />
-            <PrimaryLarge text={strings.Login} color={Colors.white} />
-            <Box display="flex" justifyContent="center" alignItems="center" pt={'30px'}>
-              <Body text={strings.dontHaveAnAccount} color={Colors.secondary} />
-              <Body text={strings.createNewAccount} color={Colors.blue12} margin={'0px 0px 0px 4px'} cursor={'pointer'} />
+
+            <Box className="form-group">
+              <TextField
+                className="textfield"
+                label={strings.confirmPassword}
+                variant="filled"
+                placeholder="Enter Here"
+                type={valuesConfirm.showPasswordConfirm ? 'text' : 'password'}
+                value={valuesConfirm.passwordConfirm}
+                onChange={handleChange('passwordConfirm')}
+                required
+              />
+              <IconButton
+                className="eye-icon"
+                aria-label="toggle password visibility"
+                onClick={handleClickShowPasswordConfirm}
+              >
+                {valuesConfirm.showPasswordConfirm ? <img src={VisibilityOff} alt=".." /> : <img src={Visibility} alt=".." />}
+              </IconButton>
             </Box>
+
+            <PrimaryLarge text={strings.submit} color={Colors.white} margin={'10px 0px 0px 0px '} />
           </form>
         </DialogContent>
       </Dialog>

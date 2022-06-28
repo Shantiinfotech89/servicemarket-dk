@@ -144,14 +144,67 @@
 }
 .form-group{
     position: relative;
+    .eye-icon{
+      position: absolute;
+      right: 7px;
+      top:8px;
+    }
     .ipnputlabel{
         margin: 2px 0 4px 0 !important;
         position: absolute;
         bottom: 0px;
     }
 }
-
-// phone number field css
+// modal css
+.maxwidth430{
+  max-width: 430px !important;
+  width: 100%;
+  margin:auto !important;
+  border-radius: 1rem;
+  .MuiDialogContent-root{
+    padding:30px 60px 30px 30px !important;
+  }
+}
+.maxwidth420{
+  max-width: 420px !important;
+  width: 100%;
+  margin:auto !important;
+  border-radius: 1rem;
+  text-align: center;
+  .success-icon{
+    margin-bottom: 20px;
+    margin-top:10px;
+    width:220px;
+    height:97px;object-fit: contain;
+  }
+}
+.maxwidth470,.MuiDialog-paperWidthSm{
+  max-width: 470px !important;
+  width: 100%;
+  margin:auto !important;
+  border-radius: 1rem;
+  .MuiDialogContent-root{
+    padding:30px 30px 30px 30px;
+    .modal-close{
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      cursor: pointer;
+    }
+    .textfield{
+      margin: 0px 0px 24px 0px !important;
+    }
+    .form-group{
+      .ipnputlabel{
+          bottom: auto;
+          top: 57px;
+      }
+    }
+  }
+}
 .react-tel-input {
     .form-control{
         border: 1px solid var(--graybb) !important;
