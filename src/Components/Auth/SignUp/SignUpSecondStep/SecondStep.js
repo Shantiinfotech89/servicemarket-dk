@@ -10,6 +10,8 @@ import authLogo from '../../../../assets/images/logo/auth-logo.svg'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
+import PhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
 
 // local strings Imports
 const strings = require('../../../../localisation_en.json')
@@ -75,12 +77,14 @@ return (
               </Grid>
               <Grid item xs={6}>
                   <Box className="form-group">
-                    <TextField
-                      className="textfield"
-                      label="Phone No."
-                      variant="filled"
-                      placeholder="Enter Here"
-                      required
+                    <PhoneInput
+                      placeholder="Phone No.*"
+                      country={'in'}
+                      inputProps={{
+                        name: 'phone',
+                        required: true,
+                        autoFocus: true
+                      }}
                     />
                   </Box>
               </Grid>

@@ -52,7 +52,7 @@ export const Body = 'body'
  * Size: 14px
  * Weight: Regular
  */
-export const InputLabel = 'inputlabel'
+export const LabelInput = 'labelInput'
 
 /**
  * Size: 12px
@@ -90,7 +90,7 @@ export function getFontSize(fontStyle) {
             return '16px'
         case Body:
             return '14px'
-        case InputLabel:
+        case LabelInput:
             return '12px'
         case small:
             return '12px'
@@ -117,7 +117,7 @@ export function getFontWeight(fontStyle) {
             return '400'
         case Body:
             return '400'
-        case InputLabel:
+        case LabelInput:
             return '400'
         case small:
             return '400'

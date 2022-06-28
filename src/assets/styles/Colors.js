@@ -11,7 +11,7 @@ export const graybb = '#BBBABB'
 export const gray69 = '#696969'
 export const grayf8 = '#F8F8F8'
 export const blue12 = '#1264A3'
-
+export const blue00 = '#001E62'
 
 
 export const success = '#379F00'

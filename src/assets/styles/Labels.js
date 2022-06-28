@@ -260,9 +260,9 @@ export function Body(props) {
  * font name: Muli
  * font weight: Regular
  */
- export function InputLabel(props) {
+ export function LabelInput(props) {
   return <LabelProvider
-            theme={FontStyles.InputLabel}
+            theme={FontStyles.LabelInput}
             fontWeight={props.fontWeight}
             textAlign={props.textAlign}
             padding={props.padding}

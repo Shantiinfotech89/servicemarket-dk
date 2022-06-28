@@ -1,7 +1,7 @@
 // Styles Imports
 import * as Colors from '../../../../assets/styles/Colors';
 import { PrimaryLarge } from '../../../../assets/styles/Buttons';
-import { Heading1B, InputLabel, LabelWrapper, Body } from '../../../../assets/styles/Labels';
+import { Heading1B, LabelInput, LabelWrapper, Body } from '../../../../assets/styles/Labels';
 // Scss Imports
 import './../SignUp.scss';
 // Images Imports
@@ -37,7 +37,7 @@ return (
                   placeholder="Enter Here"
                   required
                 />
-                <InputLabel className="ipnputlabel" color={Colors.error} text={strings.enterAValidEmailAddress}></InputLabel>
+                <LabelInput className="ipnputlabel" color={Colors.error} text={strings.enterAValidEmailAddress}></LabelInput>
               </Box>
               <Box pt={'6px'}>
                <PrimaryLarge text={strings.continue} color={Colors.white} />
