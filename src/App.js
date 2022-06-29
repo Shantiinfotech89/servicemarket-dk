@@ -9,7 +9,7 @@ import FirstStep from './Components/Auth/SignUp/SignUpFirstStep/FirstStep';
 import SecondStep from './Components/Auth/SignUp/SignUpSecondStep/SecondStep';
 import ThirdStep from './Components/Auth/SignUp/SignUpThirdStep/ThirdStep';
 import FourthStep from './Components/Auth/SignUp/SignUpFourthStep/FourthStep';
-import AllPopups from './Popups/Childs/AllPopups';
+import AllPopups from './Popups/AllPopups';
 import Login from './Popups/Childs/Login/Login';
 
 function App() {

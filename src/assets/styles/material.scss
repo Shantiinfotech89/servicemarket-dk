@@ -115,7 +115,7 @@
             align-items: center;
             justify-content: space-between;
             font-size: 14px !important;
-            color: var(--secondary) !important;
+            color: var(--gray61) !important;
             &:hover{
                 background-color: transparent !important;
             }
@@ -216,7 +216,7 @@
         padding-left: 96px !important;
     }
     .flag-dropdown{
-        background-color: var(--graye8) !important;
+        background-color: var(--grayf8) !important;
         border: 1px solid var(--graybb) !important;
         border-radius: 8px 0 0 8px !important;
         .selected-flag{
@@ -230,7 +230,7 @@
                 height: 0;
                 border-left: 5px solid transparent;
                 border-right: 5px solid transparent;
-                border-top: 6px solid var(--blue00);
+                border-top: 6px solid var(--black1d);
             }
         }
     }
@@ -248,10 +248,10 @@
                 margin-top: 0px;
             }
             .country-name{
-                color: var(--secondary) !important;
+                color: var(--gray61) !important;
             }
             .dial-code{
-                color: var(--secondary) !important;
+                color: var(--gray61) !important;
             }
             &.highlight{
                 position: relative;

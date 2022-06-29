@@ -12,12 +12,19 @@ import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
+import { useHistory } from 'react-router-dom';
 
 // local strings Imports
 const strings = require('../../../../localisation_en.json')
 
 function SecondStep(props) {
-
+  const history = useHistory();
+  const BackhandleClick = () => {
+    history.push("/signup1");
+  }
+  const handleClick = () => {
+    history.push("/signup3");
+  }
 return (
 
     <div className="auth-holder">
@@ -91,8 +98,8 @@ return (
             </Grid>
               
               <Box display={'flex'} alignItems={'center'} justifyContent={'space-between'} pt={'16px'}>
-                <BackLarge width={'140px'} text={strings.back} color={Colors.white} />
-                <PrimaryLarge width={'140px'} text={strings.continue} color={Colors.white} />
+                <BackLarge width={'140px'} text={strings.back} color={Colors.white} onClick={BackhandleClick} />
+                <PrimaryLarge width={'140px'} text={strings.continue} color={Colors.white} onClick={handleClick} />
               </Box>
             </div>
           </div>
