@@ -20,7 +20,7 @@ import CheckIcon from '@mui/icons-material/Check';
 import OutlinedInput from '@mui/material/OutlinedInput';
 import ListItemText from '@mui/material/ListItemText';
 import Autocomplete from '@mui/material/Autocomplete';
-
+import { useHistory } from 'react-router-dom';
 // local strings Imports
 const strings = require('../../../../localisation_en.json')
 const names = [
@@ -38,7 +38,13 @@ const ChooseAddress = [
 ];
 
 function ThirdStep(props) {
-
+const history = useHistory();
+const BackhandleClick = () => {
+  history.push("/signup2");
+}
+const handleClick = () => {
+  history.push("/signup4");
+}
 const [fcategory, setFcategory] = React.useState('');
 const handleChange = (event) => {
   setFcategory(event.target.value);
@@ -54,6 +60,7 @@ const handleChange2 = (event) => {
     typeof value === 'string' ? value.split(',') : value,
   );
 };
+
 
 return (
 
@@ -101,7 +108,7 @@ return (
               <Grid item xs={6}>
                   <Box className="form-group">
                     <FormControl className='selectfield' required variant="filled" sx={{ m: 1, width: 300 }}>
-                      <InputLabel id="demo-multiple-checkbox-label">Secondary Category</InputLabel>
+                      <InputLabel id="demo-multiple-checkbox-label">gray61 Category</InputLabel>
                       <Select
                         labelId="demo-multiple-checkbox-label"
                         id="demo-multiple-checkbox"
@@ -125,12 +132,12 @@ return (
             </Grid>
               <Box display={'flex'} alignItems={'center'} justifyContent={'flex-start'}>
                 <Checkbox />
-                <Body text={strings.iAgreeTo} color={Colors.secondary} padding={'0 2px 0 2px'} />
-                <Body text={strings.termsAndConditions} color={Colors.secondary} padding={'0 2px'} cursor={'pointer'} className="text-underline" />
+                <Body text={strings.iAgreeTo} color={Colors.gray61} padding={'0 2px 0 2px'} />
+                <Body text={strings.termsAndConditions} color={Colors.gray61} padding={'0 2px'} cursor={'pointer'} className="text-underline" />
               </Box>
               <Box display={'flex'} alignItems={'center'} justifyContent={'space-between'} pt={'16px'}>
-                <BackLarge width={'140px'} text={strings.back} color={Colors.white} />
-                <PrimaryLarge width={'140px'} text={strings.signUp} color={Colors.white} />
+                <BackLarge width={'140px'} text={strings.back} color={Colors.white} onClick={BackhandleClick} />
+                <PrimaryLarge width={'140px'} text={strings.signUp} color={Colors.white} onClick={handleClick} />
               </Box>
             </div>
           </div>

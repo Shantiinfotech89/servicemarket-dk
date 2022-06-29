@@ -8,12 +8,16 @@ import authLogo from '../../../assets/images/logo/auth-logo.svg'
 import nextArrowBlack from '../../../assets/images/structure/next-arrow-black.svg'
 // Material Ui Imports
 import Grid from '@mui/material/Grid';
+import { useHistory } from 'react-router-dom';
 
 // local strings Imports
 const strings = require('../../../localisation_en.json')
 
 function SignUp(props) {
-
+  const history = useHistory();
+  const handleClick = () => {
+    history.push("/signup1");
+  }
 return (
 
     <div className="auth-holder">
@@ -31,18 +35,18 @@ return (
                 <input type={'radio'} className="ub-radio-input" id="for-u" name="for-us" />
                 <label className="user-box-label" htmlFor={'for-u'}>
                   <div className="">
-                    <Heading4B text={strings.ForUser_Customer} color={Colors.secondary} padding={'0 0 4px 0'} className="ubl-h4" />
-                    <Body text={strings.BookAnyServicesNearYou} color={Colors.secondary} className="ubl-body" />
+                    <Heading4B text={strings.ForUser_Customer} color={Colors.gray61} padding={'0 0 4px 0'} className="ubl-h4" />
+                    <Body text={strings.BookAnyServicesNearYou} color={Colors.gray61} className="ubl-body" />
                   </div>
                   <img src={nextArrowBlack} className="ush-nab-icon" alt='pics' />
                 </label>
               </div>
-              <div className="user-box">
+              <div className="user-box" onClick={handleClick}>
                 <input type={'radio'} className="ub-radio-input" id="for-s" name="for-us" />
                 <label className="user-box-label" htmlFor={'for-s'}>
                   <div className="">
-                    <Heading4B text={strings.forServiceProvider} color={Colors.secondary} padding={'0 0 4px 0'} className="ubl-h4" />
-                    <Body text={strings.manageAndGrowYourBusiness} color={Colors.secondary} className="ubl-body" />
+                    <Heading4B text={strings.forServiceProvider} color={Colors.gray61} padding={'0 0 4px 0'} className="ubl-h4" />
+                    <Body text={strings.manageAndGrowYourBusiness} color={Colors.gray61} className="ubl-body" />
                   </div>
                   <img src={nextArrowBlack} className="ush-nab-icon" alt='pics' />
                 </label>
@@ -53,9 +57,9 @@ return (
         <Grid item xs={4}>
           <div className="auth-box-bottom">
             <LabelWrapper padding={'125px 0 0 0'}>
-              <Body text={strings.privacyTerms} color={Colors.gray69} padding={'0 4px'} cursor={'pointer'} />
-              <Body text={'|'} color={Colors.gray69} padding={'0 2px'} />
-              <Body text={strings.contactUs} color={Colors.gray69} fontWeight={'600'} padding={'0 4px'} cursor={'pointer'} />
+              <Body text={strings.privacyTerms} color={Colors.gray61} padding={'0 4px'} cursor={'pointer'} />
+              <Body text={'|'} color={Colors.gray61} padding={'0 2px'} />
+              <Body text={strings.contactUs} color={Colors.gray61} fontWeight={'600'} padding={'0 4px'} cursor={'pointer'} />
             </LabelWrapper>
           </div>
         </Grid>

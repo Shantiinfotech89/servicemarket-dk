@@ -31,10 +31,10 @@
             cursor: pointer;
         }
         input[type="radio"] ~ .user-box-label{
-            background-color: var(--white);
+            background: var(--white);
         }
         input[type="radio"]:checked ~ .user-box-label{
-            background-color: var(--primary);
+            background: linear-gradient(96.22deg, #13E173 27.28%, #02CDFF 110.27%);
             box-shadow: 0px 0px 12px rgba(0, 180, 189, 0.16);
             .ubl-h4{
                 color: var(--white);

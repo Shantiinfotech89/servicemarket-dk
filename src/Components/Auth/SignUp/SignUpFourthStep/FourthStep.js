@@ -69,10 +69,10 @@ return (
               </Box>
               <Box display="flex" justifyContent="center" flexDirection="column" alignItems="center" pt={'20px'}>
                 <LabelWrapper justifyContent={'center'} padding={'0 0 0px 0'} textAlign={'center'}>
-                  <Body text={strings.cantFindYourCode} color={Colors.secondary} padding={'0 2px'} />
-                  <Body text={strings.checkYourSpamFolder} color={Colors.secondary} padding={'0 2px'} />
+                  <Body text={strings.cantFindYourCode} color={Colors.gray61} padding={'0 2px'} />
+                  <Body text={strings.checkYourSpamFolder} color={Colors.gray61} padding={'0 2px'} />
                 </LabelWrapper>
-                <Body text={strings.resendCode} color={Colors.blue12} cursor={'pointer'} />
+                <Body text={strings.resendCode} color={Colors.primary} cursor={'pointer'} />
               </Box>
             </div>
           </div>
@@ -80,9 +80,9 @@ return (
         <Grid item xs={4}>
           <div className="auth-box-bottom">
             <LabelWrapper padding={'20px 0 0 0'}>
-              <Body text={strings.privacyTerms} color={Colors.gray69} padding={'0 4px'} cursor={'pointer'} />
-              <Body text={'|'} color={Colors.gray69} padding={'0 2px'} />
-              <Body text={strings.contactUs} color={Colors.gray69} fontWeight={'600'} padding={'0 4px'} cursor={'pointer'} />
+              <Body text={strings.privacyTerms} color={Colors.gray61} padding={'0 4px'} cursor={'pointer'} />
+              <Body text={'|'} color={Colors.gray61} padding={'0 2px'} />
+              <Body text={strings.contactUs} color={Colors.gray61} fontWeight={'600'} padding={'0 4px'} cursor={'pointer'} />
             </LabelWrapper>
           </div>
         </Grid>

@@ -27,7 +27,7 @@ const ButtonProvider = styled.button `
   padding: ${props => props.padding};
   margin: ${props => props.margin};
   flex-grow: ${props => props.flexGrow};
-  background-color: ${props => props.backgroundColor};
+  background: ${props => props.background};
   border-radius: ${props => props.borderRadius};
   border-width: ${props => props.borderWidth};
   border-color: ${props => props.borderColor};
@@ -54,7 +54,7 @@ ButtonProvider.defaultProps = {
     mobileMargin: 'initial',
     margin: 'initial',
     flexGrow: 0,
-    backgroundColor: 'initial',
+    background: 'linear-gradient(96.22deg, #13E173 27.28%, #02CDFF 110.27%)',
     borderWidth: '0',
     borderColor: 'initial',
     borderRadius: '0',
@@ -82,7 +82,7 @@ export function PrimaryLarge(props) {
     padding = { '12px 16px' }
     margin = { props.margin }
     flexGrow = { props.flexGrow }
-    backgroundColor = { Colors.primary }
+    background = { 'linear-gradient(96.22deg, #13E173 27.28%, #02CDFF 110.27%);' }
     color = { Colors.white }
     borderRadius = { '8px' }
     borderWidth = { '0px' }
@@ -112,7 +112,7 @@ export function PrimarySmall(props) {
     padding = { '8px 16px' }
     margin = { props.margin }
     flexGrow = { props.flexGrow }
-    backgroundColor = { Colors.primary }
+    background = { 'linear-gradient(96.22deg, #13E173 27.28%, #02CDFF 110.27%);' }
     color = { Colors.white }
     borderRadius = { '8px' }
     borderWidth = { '0px' }
@@ -143,7 +143,7 @@ export function PrimaryOutlineLarge(props) {
     padding = { '12px 30px' }
     margin = { props.margin }
     flexGrow = { props.flexGrow }
-    backgroundColor = { 'transparent' }
+    background = { 'transparent' }
     color = { Colors.primary }
     borderRadius = { '8px' }
     borderWidth = { '1px' }
@@ -173,7 +173,7 @@ export function PrimaryOutlineSmall(props) {
     padding = { '8px 16px' }
     margin = { props.margin }
     flexGrow = { props.flexGrow }
-    backgroundColor = { 'transparent' }
+    background = { 'transparent' }
     color = { Colors.primary }
     borderRadius = { '8px' }
     borderWidth = { '1px' }
@@ -205,8 +205,8 @@ export function PrimaryOutlineSmall(props) {
   padding = { '12px 16px' }
   margin = { props.margin }
   flexGrow = { props.flexGrow }
-  backgroundColor = { Colors.grayf8 }
-  color = { Colors.secondary }
+  background = { Colors.grayf8 }
+  color = { Colors.gray61 }
   borderRadius = { '8px' }
   borderWidth = { '0px' }
   textAlign = { 'center' }
