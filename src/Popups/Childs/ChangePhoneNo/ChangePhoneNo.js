@@ -6,7 +6,9 @@ import { PrimaryLarge } from '../../../assets/styles/Buttons';
 import ModalClose from '../../../assets/images/structure/modal-close-icon.svg'
 // Imports Material Ui
 import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
+// imports phone input
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 // local strings Imports
 const strings = require('../../../localisation_en.json')
 
@@ -19,13 +21,15 @@ function ChangePhoneNo(props) {
         <Heading2B text={strings.changePhoneNo} color={Colors.black1d}  margin={'0  0px 8px 0'} />
         <Body text={strings.youCanChangeYourNewPhoneNoHere} color={Colors.black45} margin={'0  0px 30px 0'} />
         <form>
-          <Box className="form-group" margin={'0px 0px 10px 0px'}>
-            <TextField
-              className="textfield"
-              label="Phone id"
-              variant="filled"
-              placeholder="Enter Here"
-              required
+          <Box className="form-group" margin={'0px 0px 40px 0px'}>
+            <PhoneInput
+              placeholder="Phone No.*"
+              country={'in'}
+              inputProps={{
+                name: 'phone',
+                required: true,
+                autoFocus: true
+              }}
             />
           </Box>
           <PrimaryLarge text={strings.submit} color={Colors.white} />

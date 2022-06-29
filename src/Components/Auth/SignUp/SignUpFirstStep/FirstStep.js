@@ -27,7 +27,7 @@ function FirstStep(props) {
     history.push("/signup2");
   }
   function loginPopupOpen() {
-    setPopupType(POPUP_TYPE.LOGIN);
+    setPopupType(POPUP_TYPE.VERIFY_OTP);
     setPopupOpen(true);
   }
 
@@ -74,7 +74,7 @@ return (
           </div>
         </Grid>
       </Grid>
-      <AllPopups 
+      <AllPopups
           popupIsOpen={popupOpen}
           style={popupType}
           closePopup={() => setPopupOpen(false)}
