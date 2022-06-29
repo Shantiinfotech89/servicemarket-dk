@@ -17,9 +17,13 @@ function SuccessModal(props) {
           <img src={SuccessIcon} alt="..." className="success-icon" onClick={() => props.closePopup()} />
           <Heading2B text={strings.successfulPasswordReset} color={Colors.black1d} textAlign={'center'} margin={'0  0px 8px 0'} />
           {/* Password changed successfully
-          Phone No. changed successfully
-          Email changed successfully*/}
+           Phone No. changed successfully
+           Email changed successfully*/}
           <Body text={strings.yourPasswordHasBeenSuccessfullyReset} color={Colors.black45} textAlign={'center'} margin={'0  0px 40px 0'} />
+          {/*Your password has been successfully changed
+            Your phone no. has been successfully changed
+            Your email has been successfully changed
+            */}
 
           <PrimaryLarge text={strings.close} color={Colors.white} width={'150px'} onClick={() => props.closePopup()} />
         </div>
