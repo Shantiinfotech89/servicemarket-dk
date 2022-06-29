@@ -13,7 +13,6 @@ import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
 
 // local strings Imports
 const strings = require('../../../localisation_en.json')
