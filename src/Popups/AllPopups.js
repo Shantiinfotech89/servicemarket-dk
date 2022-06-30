@@ -20,65 +20,65 @@ function AllPopups(props) {
     switch (props.style) {
       case POPUP_TYPE.LOGIN:
         return(
-          <Login 
+          <Login
             closePopup={() => props.closePopup()}
-            popupIsOpen={props.popupOpen} 
+            popupIsOpen={props.popupOpen}
           />
         );
       case POPUP_TYPE.FORGOT_PASSWORD:
         return(
-          <ForgotPassword 
+          <ForgotPassword
             closePopup={() => props.closePopup()}
-            popupIsOpen={props.popupOpen} 
+            popupIsOpen={props.popupOpen}
           />
         );
       case POPUP_TYPE.RESET_PASSWORD:
         return(
           <ResetPassword
             closePopup={() => props.closePopup()}
-            popupIsOpen={props.popupOpen} 
+            popupIsOpen={props.popupOpen}
           />
-        ); 
+        );
       case POPUP_TYPE.SUCCESS_MODAL:
         return(
           <SuccessModal
             closePopup={() => props.closePopup()}
-            popupIsOpen={props.popupOpen} 
+            popupIsOpen={props.popupOpen}
           />
-        ); 
+        );
       case POPUP_TYPE.VERIFY_OTP:
         return(
           <VerifyOTP
             closePopup={() => props.closePopup()}
-            popupIsOpen={props.popupOpen} 
+            popupIsOpen={props.popupOpen}
           />
-        );  
+        );
       case POPUP_TYPE.CHANGE_PASSWORD:
         return(
           <ChangePassword
             closePopup={() => props.closePopup()}
-            popupIsOpen={props.popupOpen} 
+            popupIsOpen={props.popupOpen}
           />
         );
       case POPUP_TYPE.CHANGE_EMAIL:
         return(
           <ChangeEmail
             closePopup={() => props.closePopup()}
-            popupIsOpen={props.popupOpen} 
+            popupIsOpen={props.popupOpen}
           />
         );
       case POPUP_TYPE.CHANGE_PHONE_NO:
         return(
           <ChangePhoneNo
             closePopup={() => props.closePopup()}
-            popupIsOpen={props.popupOpen} 
+            popupIsOpen={props.popupOpen}
           />
         );
       case POPUP_TYPE.DELETE_MODAL:
         return(
-          <DeleteModal 
+          <DeleteModal
             closePopup={() => props.closePopup()}
-            popupIsOpen={props.popupOpen} 
+            popupIsOpen={props.popupOpen}
           />
         );
     }
