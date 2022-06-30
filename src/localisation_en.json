@@ -18,7 +18,6 @@
   "loginToSM":"Login to SM",
   "welcomeBackEnterYourEmailAddressAndPassword" :"Welcome back ! Enter your email address and password.",
   "back": "Back",
-  "companyDetails": "Company details",
   "Login": "Login",
   "forgotPassword": "Forgot Password",
   "dontHaveAnAccount": "Don’t have an account?",
@@ -27,7 +26,6 @@
   "submit": "Submit",
   "verifyOTP": "Verify OTP",
   "enterTheCodeSentToYourEmailAddress": "Enter the code sent to your email address.",
-  "verify": "Verify",
   "resendOTP": "Resend OTP",
   "resetPassword": "Reset Password",
   "setYourNewPasswordHere": "Set your new password here",
@@ -57,8 +55,10 @@
   "resendCode": "Resend Code",
   "iAgreeTo": "I agree to",
   "termsAndConditions": "Terms and Conditions",
-  "addYourServices": "Add your services",
-  "youHaveToAddYourServicesFirst": "You have to add your services first"
-
-
+  "serviceMarket": "ServiceMarket",
+  "myProfile": "My Profile",
+  "settings": "Settings",
+  "AddYourServices": "Add your services",
+  "YouHaveToAddYourServicesFirst": "You have to add your services first"
+  
 }

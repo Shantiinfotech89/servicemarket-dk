@@ -155,6 +155,30 @@
         bottom: 0px;
     }
 }
+.header-right{
+    .MuiButton-text{
+        padding: 0 !important;
+       &:hover {
+            -webkit-text-decoration: none;
+            text-decoration: none;
+            background-color: transparent !important;
+        }
+    }
+}
+#basic-menu{
+    .MuiPaper-elevation{
+        top: 70px !important;
+        left: unset !important;
+        right: 10px !important;
+        .MuiMenuItem-root{
+            color: var(--black1d) !important;
+            justify-content: flex-start;
+            .profile-dropd-icon{
+                margin-right: 8px;
+            }
+        }
+    }
+}
 // modal css
 .maxwidth430{
   max-width: 430px !important;

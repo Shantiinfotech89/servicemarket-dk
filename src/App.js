@@ -11,6 +11,7 @@ import ThirdStep from './Components/Auth/SignUp/SignUpThirdStep/ThirdStep';
 import FourthStep from './Components/Auth/SignUp/SignUpFourthStep/FourthStep';
 import AllPopups from './Popups/AllPopups';
 import Login from './Popups/Childs/Login/Login';
+import Profile from './Components/Main/ServiceProvider/Profile/Profile';
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
           <Route exact path="/signup3" render={(props) => <ThirdStep {...props} />} />
           <Route exact path="/signup4" render={(props) => <FourthStep {...props} />} />
           <Route exact path="/AllPopups" render={(props) => <AllPopups {...props} />} />
+          <Route exact path="/profile" render={(props) => <Profile {...props} />} />
 
         </Switch>
       </Router>
