@@ -1,16 +1,16 @@
 // Import scss
-import './Profile.scss';
+import './Dashboard.scss';
 // Import Pages
 
 
-function Profile(props) {
+function Dashboard(props) {
     return(
         <div className='mmh-container'>
                     <div>
-                   Profile
+                    Dashboard
                     </div>
         </div>
     )
 }
 
-export default Profile
+export default Dashboard

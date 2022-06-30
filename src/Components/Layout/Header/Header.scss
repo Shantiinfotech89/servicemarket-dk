@@ -6,6 +6,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    width: 100%;
     .header-left{
         display: flex;
         align-items: center;
@@ -30,6 +32,25 @@
             background: linear-gradient(96.22deg, #13E173 27.28%, #02CDFF 110.27%);
             border-radius: 8px;
             padding: 6px;
+            display: flex;
+            align-items: c;
+            // header Progress
+            .top-progress{
+                height: 40px;
+                width: 40px;
+                color: var(--white);
+                .react-sweet-progress-circle-outer{
+                    background-color: rgba(255, 255, 255, .20);
+                    border-radius: 50%;
+                    .react-sweet-progress-symbol-absolute{
+                        .react-sweet-progress-symbol{
+                        color: var(--white);
+                        font-size: 11px;
+                        font-weight: 600;
+                        }
+                    }
+                }
+            }
             .h-sb-right{
                 padding-left: 12px;
             }

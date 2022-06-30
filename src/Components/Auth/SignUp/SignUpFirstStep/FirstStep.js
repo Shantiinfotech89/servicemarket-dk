@@ -27,7 +27,7 @@ function FirstStep(props) {
     history.push("/signup2");
   }
   function loginPopupOpen() {
-    setPopupType(POPUP_TYPE.VERIFY_OTP);
+    setPopupType(POPUP_TYPE.LOGIN);
     setPopupOpen(true);
   }
 

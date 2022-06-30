@@ -1,4 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
+import { useHistory } from "react-router-dom";
+import { MAIN_COMPONENTS_STATE } from "../../../Helpers/Enums";
 // Styles Imports
 import * as Colors from '../../../assets/styles/Colors';
 import { Small, Smallest } from '../../../assets/styles/Labels';
@@ -16,12 +18,16 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import Box from '@mui/material/Box';
+import { Progress } from 'react-sweet-progress';
+import "react-sweet-progress/lib/style.css";
 
 // local strings Imports
 const strings = require('../../../localisation_en.json')
 
 function Header(props) {
-
+let history = useHistory();
+const [activeState, setActiveState] = useState("");
 const [anchorEl, setAnchorEl] = React.useState(null);
 const open = Boolean(anchorEl);
 const handleClick = (event) => {
@@ -39,9 +45,34 @@ const handleClose = () => {
             </div>
             <div className='header-right'>
                 <div className='h-services-box'>
+                    <Box className="top-progress" m={'auto'}>
+                        <Progress type="circle" strokeWidth={7} width={40} percent={60} status="default"
+                        theme={{
+                            success: {
+                                color: '#FFFFFF'
+                            },
+                            active: {
+                                color: '#FFFFFF'
+                            },
+                            default: {
+                                color: '#FFFFFF'
+                            }
+                            }}
+                        />
+                    </Box>
                     <div className='h-sb-right'>
                         <Small text={strings.AddYourServices} color={Colors.white} fontWeight={'600'} margin={'0 0 0px 0'} />
+                        {/*
+                            AddYourCoverImage
+                            AddYourPortfolioImages
+                            AddYourWorkingHours
+                        */}
                         <Smallest text={strings.YouHaveToAddYourServicesFirst} color={Colors.white} margin={'0 0 0px 0'} />
+                        {/*
+                            YouHaveToAddYourCoverImage
+                            YouHaveToAddPortfolioImages
+                            YouHaveToAddYourWorkingHours
+                        */}
                     </div>
                 </div>
                 <div className='notification-box'>
@@ -67,7 +98,17 @@ const handleClose = () => {
                         'aria-labelledby': 'basic-button',
                         }}
                     >
-                        <MenuItem onClick={handleClose}> <img src={myProfileIcon} alt="picture" className='profile-dropd-icon' /> {strings.myProfile}</MenuItem>
+                        <MenuItem 
+                            onClick={() => {
+                                setActiveState(MAIN_COMPONENTS_STATE.PROFILE);
+                                props.setCurrentOpenPage(MAIN_COMPONENTS_STATE.PROFILE);
+                                window.localStorage.setItem("sidebar", MAIN_COMPONENTS_STATE.PROFILE);
+                                history.push({
+                                pathname: "/main-app",
+                                search: "?profile",
+                                });
+                            }}
+                        > <img src={myProfileIcon} alt="picture" className='profile-dropd-icon' /> {strings.myProfile}</MenuItem>
                         <MenuItem onClick={handleClose}> <img src={settingIcon} alt="picture" className='profile-dropd-icon' /> {strings.settings}</MenuItem>
                     </Menu>
                 </div>
