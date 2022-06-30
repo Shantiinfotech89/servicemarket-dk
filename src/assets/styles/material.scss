@@ -63,7 +63,7 @@
         height: 52px;
         border-radius: 8px !important;
         border: 2px solid var(--primary);
-    } 
+    }
     .MuiSelect-filled{
         text-align: left;
     }
@@ -96,7 +96,7 @@
             }
         }
     }
-    
+
     .MuiOutlinedInput-notchedOutline{
         top: 0px;
         legend{
@@ -274,4 +274,32 @@
             }
         }
     }
+}
+
+// header Progress
+.top-progress{
+  height: 52px;
+  width: 236px;
+  padding:6px 12px;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(96.22deg, #13E173 27.28%, #02CDFF 110.27%);
+  color: var(--white);
+  .react-sweet-progress-circle-outer{
+    background-color: rgba(255, 255, 255, .20);
+    border-radius: 50%;
+    .react-sweet-progress-symbol-absolute{
+      .react-sweet-progress-symbol{
+        color: var(--white);
+        font-size: 11px;
+        font-weight: 600;
+      }
+    }
+  }
+  .font10{
+    font-size: 10px;
+    margin-top: 8px
+  }
 }

@@ -16,7 +16,7 @@ export const LabelWrapper = styled.div`
   transition: transform .2s ease-in-out;
   &::after {
     content: '';
-   
+
   }
 
   ::-webkit-scrollbar {
