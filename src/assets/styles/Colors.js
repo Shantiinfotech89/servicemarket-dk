@@ -6,6 +6,7 @@ export const gray61 = '#616061'
 export const graybb = '#BBBABB'
 export const grayf8 = '#F8F8F8'
 export const graye8 = '#e8e8e8'
+export const grayf5 = '#F5F5F5'
 
 export const success = '#379F00'
 export const warning = '#FFCC41'

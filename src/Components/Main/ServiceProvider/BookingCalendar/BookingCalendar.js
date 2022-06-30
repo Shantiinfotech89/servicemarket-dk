@@ -1,16 +1,16 @@
 // Import scss
-import './Profile.scss';
+import './BookingCalendar.scss';
 // Import Pages
 
 
-function Profile(props) {
+function BookingCalendar(props) {
     return(
         <div className='mmh-container'>
                     <div>
-                   Profile
+                    Booking Calendar
                     </div>
         </div>
     )
 }
 
-export default Profile
+export default BookingCalendar

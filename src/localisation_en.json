@@ -59,6 +59,12 @@
   "myProfile": "My Profile",
   "settings": "Settings",
   "AddYourServices": "Add your services",
-  "YouHaveToAddYourServicesFirst": "You have to add your services first"
+  "AddYourCoverImage": "Add your cover image",
+  "AddYourPortfolioImages": "Add your Portfolio images",
+  "AddYourWorkingHours": "Add your working hours",
+  "YouHaveToAddYourServicesFirst": "You have to add your services first",
+  "YouHaveToAddYourCoverImage": "You have to add your cover image",
+  "YouHaveToAddPortfolioImages": "You have to add portfolio images",
+  "YouHaveToAddYourWorkingHours": "You have to add your working hours"
   
 }

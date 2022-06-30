@@ -10,3 +10,9 @@ export const POPUP_TYPE = {
     CHANGE_PHONE_NO: "ChangePhoneNo",
     DELETE_MODAL: "DeleteModal",
 }
+// All pAGES types the app has
+export const MAIN_COMPONENTS_STATE = {
+    DASHBOARD : "Dashboard",
+    BOOKINGCALENDAR : "BookingCalendar",
+    PROFILE: "Profile",
+}
