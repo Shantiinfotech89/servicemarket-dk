@@ -67,7 +67,11 @@ export const small = 'small'
  */
 export const error = 'error'
 
-
+/**
+ * Size: 10px
+ * Weight: Regular
+ */
+ export const smallest = 'smallest'
 
 export function getFontFamily(fontStyle) {
     return 'Muli'
@@ -96,6 +100,8 @@ export function getFontSize(fontStyle) {
             return '12px'
         case error:
             return '12px'
+        case smallest:
+            return '10px'    
         default:
             return
     }
@@ -123,6 +129,8 @@ export function getFontWeight(fontStyle) {
             return '400'
         case error:
             return '400'
+        case smallest:
+            return '400'    
         default:
             return
     }

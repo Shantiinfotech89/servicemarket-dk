@@ -357,3 +357,29 @@ export function Error(props) {
              {props.text}
          </LabelProvider>
 }
+
+/**
+ * Represents a div with
+ * font size: 10px
+ * font name: Muli
+ * font weight: Regular
+ */
+ export function Smallest(props) {
+  return <LabelProvider
+            theme={FontStyles.smallest}
+            fontWeight={props.fontWeight}
+            textAlign={props.textAlign}
+            padding={props.padding}
+            margin={props.margin}
+            flexGrow={props.flexGrow}
+            color={props.color}
+            lineHeight={props.lineHeight}
+            letterSpacing={props.letterSpacing}
+            textDecoration={props.textDecoration}
+            cursor={props.cursor}
+            onClick={props.onClick}
+            className={props.className}
+            >
+              {props.text}
+          </LabelProvider>
+ }
