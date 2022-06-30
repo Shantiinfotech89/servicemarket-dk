@@ -1,0 +1,54 @@
+.header-holder{
+    padding: 10px 20px;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--graye8);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .header-left{
+        display: flex;
+        align-items: center;
+        .header-logo{
+            width: 42px;
+            height: 50px;
+            cursor: pointer;
+        }
+        .dasboard-name{
+            text-transform: uppercase;
+            font-size: 24px;
+            font-weight: 700;
+            font-family: 'Muli';
+            letter-spacing: 2px;
+            padding-left: 16px;
+        }
+    }
+    .header-right{
+        display: flex;
+        align-items: center;
+        .h-services-box{
+            background: linear-gradient(96.22deg, #13E173 27.28%, #02CDFF 110.27%);
+            border-radius: 8px;
+            padding: 6px;
+            .h-sb-right{
+                padding-left: 12px;
+            }
+        }
+        .notification-box{
+            margin-left: 20px;
+            .notification-icon{
+                cursor: pointer;
+            }
+        }
+        .profile-box{
+            padding-left: 20px;
+            border-left: 1px solid var(--graye8);
+            margin-left: 20px;
+        }
+        .user-profile-img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    }
+}
