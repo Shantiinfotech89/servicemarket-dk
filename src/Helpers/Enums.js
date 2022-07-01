@@ -9,6 +9,10 @@ export const POPUP_TYPE = {
     CHANGE_EMAIL: "ChangeEmail",
     CHANGE_PHONE_NO: "ChangePhoneNo",
     DELETE_MODAL: "DeleteModal",
+    LOGOUT_MODAL: "LogoutModal",
+    CANCEL_SUBSCRIPTION: "CancelSubscription",
+    UPDATE_CHANGE_CARD: "UpdateChangeCard",
+    CHAT_COMFIRMATION_MODAL: "ChatComfirmationModal",
 }
 // All pAGES types the app has
 export const MAIN_COMPONENTS_STATE = {

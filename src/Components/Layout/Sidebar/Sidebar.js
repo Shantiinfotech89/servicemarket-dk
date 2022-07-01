@@ -1,6 +1,9 @@
 import {useState} from 'react';
 import { useHistory } from "react-router-dom";
-import { MAIN_COMPONENTS_STATE } from "../../../Helpers/Enums";
+import { MAIN_COMPONENTS_STATE,POPUP_TYPE } from "../../../Helpers/Enums";
+// import { POPUP_TYPE } from '../../../Helpers/Enums'
+// Pages Imports
+import AllPopups from '../../../Popups/AllPopups';
 // Images Imports
 import sDashboardIcon from '../../../assets/images/structure/s-dashboard.svg'
 import sDatepickerIcon from '../../../assets/images/structure/s-datepicker.svg'
@@ -12,9 +15,17 @@ import sLogoutIcon from '../../../assets/images/structure/s-logout.svg'
 import './Sidebar.scss';
 
 function Sidebar(props) {
-    let history = useHistory();
+    const [popupOpen, setPopupOpen] = useState(false);
+    const [popupType, setPopupType] = useState("");
     const [activeState, setActiveState] = useState("");
+    let history = useHistory();
+
+    function logoutPopupOpen() {
+      setPopupType(POPUP_TYPE.LOGOUT_MODAL);
+      setPopupOpen(true);
+    }
     return(
+      <>
         <div className="sidebar-holder">
             <div className=''>
                 <div className={
@@ -62,11 +73,17 @@ function Sidebar(props) {
                 </div>
             </div>
             <div className=''>
-                <div className='sh-menu-list'>
+                <div className='sh-menu-list'  onClick={() => logoutPopupOpen()}>
                     <img src={sLogoutIcon} className="sh-menu-icon" alt='icon' />
                 </div>
             </div>
         </div>
+          <AllPopups
+              popupIsOpen={popupOpen}
+              style={popupType}
+              closePopup={() => setPopupOpen(false)}
+          />
+      </>
     )
 }
 
