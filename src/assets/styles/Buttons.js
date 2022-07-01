@@ -219,3 +219,33 @@ export function PrimaryOutlineSmall(props) {
   mobileMargin = { props.mobileMargin }
   className = { props.className } > { props.text } </ButtonProvider>
 }
+
+/**
+ * Represents a Semibold button with
+ * font size: 16px
+ * font name: Muli
+ * font weight: Semibold
+ * background color: white
+ * padding: 16px 40px
+ */
+ export function CancelLarge(props) {
+  return <ButtonProvider
+  fontSize = { '16px' }
+  fontWeight = { props.fontWeight }
+  padding = { '12px 16px' }
+  margin = { props.margin }
+  flexGrow = { props.flexGrow }
+  background = { Colors.white }
+  color = { Colors.gray61 }
+  borderRadius = { '8px' }
+  borderWidth = { '0px' }
+  textAlign = { 'center' }
+  width = { props.width }
+  height = { '48px' }
+  boxShadow = {'none'}
+  fadeIn = { props.fadeIn }
+  onClick = { props.onClick }
+  mobileWidth = { props.mobileWidth }
+  mobileMargin = { props.mobileMargin }
+  className = { props.className } > { props.text } </ButtonProvider>
+}

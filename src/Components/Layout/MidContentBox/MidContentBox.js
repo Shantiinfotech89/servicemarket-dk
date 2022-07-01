@@ -9,6 +9,7 @@ import Header from '../../Layout/Header/Header'
 import Sidebar from '../../Layout/Sidebar/Sidebar'
 import Dashboard from '../../../Components/Main/ServiceProvider/Dashboard/Dashboard'
 import BookingCalendar from '../../../Components/Main/ServiceProvider/BookingCalendar/BookingCalendar'
+import MyEmployees from '../../../Components/Main/ServiceProvider/MyEmployees/MyEmployees'
 import Profile from '../../../Components/Main/ServiceProvider/Profile/Profile'
 // Import Material Ui
 import BounceLoader from "react-spinners/BounceLoader";
@@ -48,8 +49,10 @@ function MidContentBox(props) {
         switch (currentOpenPage) {
           case MAIN_COMPONENTS_STATE.DASHBOARD:
             return renderDashboard()
-        case MAIN_COMPONENTS_STATE.BOOKINGCALENDAR:
+          case MAIN_COMPONENTS_STATE.BOOKINGCALENDAR:
             return renderBookingCalendar();
+          case MAIN_COMPONENTS_STATE.MY_EMPLOYEES:
+            return renderMyEmployees();    
           case MAIN_COMPONENTS_STATE.PROFILE:
             return renderProfile();
           
@@ -63,6 +66,9 @@ function MidContentBox(props) {
     }
     function renderBookingCalendar() {
         return <BookingCalendar />
+    }
+    function renderMyEmployees() {
+      return <MyEmployees />
     }
     function renderProfile() {
         return <Profile />

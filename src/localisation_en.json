@@ -65,6 +65,22 @@
   "YouHaveToAddYourServicesFirst": "You have to add your services first",
   "YouHaveToAddYourCoverImage": "You have to add your cover image",
   "YouHaveToAddPortfolioImages": "You have to add portfolio images",
-  "YouHaveToAddYourWorkingHours": "You have to add your working hours"
+  "YouHaveToAddYourWorkingHours": "You have to add your working hours",
+  "workingHours": "Working Hours",
+  "ManageWorkingHoursOfYourBussiness": "Manage working hours of your bussiness",
+  "cancel": "Cancel",
+  "save": "Save",
+  "monday": "Monday",
+  "tuesday": "Tuesday",
+  "wednesday": "Wednesday",
+  "thursday": "Thursday",
+  "friday": "Friday",
+  "saturday": "Saturday",
+  "sunday": "Sunday",
+  "closed": "Closed",
+  "myEmployees": " My Employees",
+  "employee": "Employee",
+  "searchDots": "Search..."
+  
   
 }
