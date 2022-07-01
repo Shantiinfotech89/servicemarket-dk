@@ -54,7 +54,21 @@ function Sidebar(props) {
                 <div className='sh-menu-list'>
                     <img src={sCategoryIcon} className="sh-menu-icon" alt='icon' />
                 </div>
-                <div className='sh-menu-list'>
+                <div className={
+                        activeState === MAIN_COMPONENTS_STATE.MY_EMPLOYEES
+                        ? "sh-menu-list active"
+                        : "sh-menu-list"
+                    }
+                    onClick={() => {
+                        setActiveState(MAIN_COMPONENTS_STATE.MY_EMPLOYEES);
+                        props.setCurrentOpenPage(MAIN_COMPONENTS_STATE.MY_EMPLOYEES);
+                        window.localStorage.setItem("sidebar", MAIN_COMPONENTS_STATE.MY_EMPLOYEES);
+                        history.push({
+                        pathname: "/main-app",
+                        search: "?my-employees",
+                        });
+                    }}
+                >
                     <img src={sUserIcon} className="sh-menu-icon" alt='icon' />
                 </div>
                 <div className='sh-menu-list'>
