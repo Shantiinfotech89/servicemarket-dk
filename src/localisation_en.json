@@ -66,6 +66,17 @@
   "YouHaveToAddYourCoverImage": "You have to add your cover image",
   "YouHaveToAddPortfolioImages": "You have to add portfolio images",
   "YouHaveToAddYourWorkingHours": "You have to add your working hours",
+  "Areyousureyouwanttocancelthesubscription": "Are you sure you want to cancel the subscription?",
+  "IfYesyoursubscriptionwillbecancelled":"If Yes, your subscription will be cancelled after 3 month, till now you can still access the premium plan features & every month you will be charged as usual unless the end date of subscription.",
+  "CancelSubscription": "Cancel Subscription",
+  "Update_ChangeCard": "Update/Change Card",
+  "Youcanupdate_changeyourcardhere": "You can update/change your card here",
+  "CardNumber": "Card Number",
+  "ExpiryDate": "Expiry Date",
+  "CVV": "CVV",
+  "CardHolderName": "Card Holder Name",
+  "Areyousureyouwanttologout": "Are you sure you want to logout?",
+  "Areyousureyouwanttoblockthisuser": "Are you sure you want to block this user?",
   "workingHours": "Working Hours",
   "ManageWorkingHoursOfYourBussiness": "Manage working hours of your bussiness",
   "cancel": "Cancel",
@@ -81,6 +92,4 @@
   "myEmployees": " My Employees",
   "employee": "Employee",
   "searchDots": "Search..."
-  
-  
 }

@@ -3,8 +3,8 @@ import * as Colors from '../../../assets/styles/Colors';
 import {  Heading2B, Body } from '../../../assets/styles/Labels';
 import { PrimaryLarge } from '../../../assets/styles/Buttons';
 // Images Imports
-import Visibility from '../../../assets/images/structure/Visibility.png'
-import VisibilityOff from '../../../assets/images/structure/VisibilityOff.png'
+import Visibility from '../../../assets/images/structure/Visibility.svg'
+import VisibilityOff from '../../../assets/images/structure/VisibilityOff.svg'
 import ModalClose from '../../../assets/images/structure/modal-close-icon.svg'
 // Imports Material Ui
 import * as React from 'react';

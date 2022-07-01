@@ -11,6 +11,10 @@ import ChangePassword from './Childs/ChangePassword/ChangePassword';
 import ChangeEmail from './Childs/ChangeEmail/ChangeEmail';
 import ChangePhoneNo from './Childs/ChangePhoneNo/ChangePhoneNo';
 import DeleteModal from './Childs/DeleteModal/DeleteModal';
+import LogoutModal from './Childs/LogoutModal/LogoutModal';
+import CancelSubscription from './Childs/CancelSubscription/CancelSubscription';
+import UpdateChangeCard from './Childs/UpdateChangeCard/UpdateChangeCard';
+import ChatComfirmationModal from './Childs/ChatComfirmationModal/ChatComfirmationModal';
 
 // local strings Imports
 
@@ -77,6 +81,34 @@ function AllPopups(props) {
       case POPUP_TYPE.DELETE_MODAL:
         return(
           <DeleteModal
+            closePopup={() => props.closePopup()}
+            popupIsOpen={props.popupOpen}
+          />
+        );
+      case POPUP_TYPE.LOGOUT_MODAL:
+        return(
+          <LogoutModal
+            closePopup={() => props.closePopup()}
+            popupIsOpen={props.popupOpen}
+          />
+        );
+      case POPUP_TYPE.CANCEL_SUBSCRIPTION:
+        return(
+          <CancelSubscription
+            closePopup={() => props.closePopup()}
+            popupIsOpen={props.popupOpen}
+          />
+        );
+      case POPUP_TYPE.UPDATE_CHANGE_CARD:
+        return(
+          <UpdateChangeCard
+            closePopup={() => props.closePopup()}
+            popupIsOpen={props.popupOpen}
+          />
+        );
+      case POPUP_TYPE.CHAT_COMFIRMATION_MODAL:
+        return(
+          <ChatComfirmationModal
             closePopup={() => props.closePopup()}
             popupIsOpen={props.popupOpen}
           />

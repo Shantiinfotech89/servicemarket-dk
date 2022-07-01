@@ -44,12 +44,15 @@
             .ph-paper-box{
                 &.width470{
                     width: 470px;
+                    max-width: 470px;
                 }
                 &.width430{
-                    width: 430px;
+                  width: 430px;
+                  max-width: 430px;
                 }
                 &.width420{
-                    width: 420px;
+                  width: 420px;
+                  max-width: 420px;
                 }
                 background-color: #fff;
                 color: rgba(0, 0, 0, 0.87);
