@@ -104,6 +104,32 @@
         }
     }
 }
+.inputs-group{
+    .selectfield{
+        margin: 0 0 20px 0 !important;
+    }
+    .selectfield .MuiInputBase-formControl::before {
+        height: 40px !important;
+    }
+    .selectfield .MuiInputBase-formControl::after {
+        height: 40px !important;
+    }
+    .selectfield .MuiSelect-select {
+        padding-top: 10px !important;
+        border-radius: 8px !important;
+        padding-bottom: 8px;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 600;
+        background-color: transparent !important;
+    }
+    .selectfield .MuiFormLabel-colorPrimary{
+        transform: translate(12px, 9px) scale(1);
+    }
+    .selectfield .MuiFormLabel-colorPrimary.MuiFormLabel-filled {
+        font-size: 0px;
+    }
+}
 .MuiPopover-paper, .MuiAutocomplete-paper{
     border: 1px solid var(--graybb) !important;
     .MuiList-padding{

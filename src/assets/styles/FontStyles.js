@@ -120,7 +120,7 @@ export function getFontWeight(fontStyle) {
         case Heading5B:
             return '600'
         case Heading6S:
-            return '400'
+            return '600'
         case Body:
             return '400'
         case LabelInput:

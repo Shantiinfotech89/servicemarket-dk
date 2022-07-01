@@ -76,6 +76,20 @@
   "CVV": "CVV",
   "CardHolderName": "Card Holder Name",
   "Areyousureyouwanttologout": "Are you sure you want to logout?",
-  "Areyousureyouwanttoblockthisuser": "Are you sure you want to block this user?"
-
+  "Areyousureyouwanttoblockthisuser": "Are you sure you want to block this user?",
+  "workingHours": "Working Hours",
+  "ManageWorkingHoursOfYourBussiness": "Manage working hours of your bussiness",
+  "cancel": "Cancel",
+  "save": "Save",
+  "monday": "Monday",
+  "tuesday": "Tuesday",
+  "wednesday": "Wednesday",
+  "thursday": "Thursday",
+  "friday": "Friday",
+  "saturday": "Saturday",
+  "sunday": "Sunday",
+  "closed": "Closed",
+  "myEmployees": " My Employees",
+  "employee": "Employee",
+  "searchDots": "Search..."
 }
