@@ -6,6 +6,7 @@ import { Heading6S, Body } from '../../../../assets/styles/Labels';
 // Import scss
 import './MyEmployees.scss';
 // Import Pages
+import AddEmployee from './AddEmployee/AddEmployee';
 import Pagination from '../../../../GlobalModule/Pagination/Pagination';
 // Images Imports
 import myInputSearchIcon from '../../../../assets/images/structure/inputsearch-icon.svg'
@@ -32,14 +33,14 @@ const columns = [
       width: 160,
     },
   ];
-  
+
   const rows = [
     { id: 1, lastName: 'Snow', firstName: 'Jon', email: 'kristinwatson@gmail.com', services: 'Haircut, Haircolor', active_inactive: '' },
     
   ];
 
 function MyEmployees(props) {
-    
+
     return(
         <div className='mmh-container'>
             <div className='my-employees-holder'>
@@ -70,6 +71,7 @@ function MyEmployees(props) {
                     <Pagination />
                 </Box>
             </div>
+            <AddEmployee />
         </div>
     )
 }

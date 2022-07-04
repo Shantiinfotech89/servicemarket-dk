@@ -326,3 +326,35 @@
     }
 }
 
+// side bar scss
+.sidebar-right{
+  width: 350px;
+  height: 100vh;
+  box-shadow: 0px 0px 12px 0px #00000033;
+  background: var(--white);
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  .sidebar-close{
+    position: absolute;
+    width: 24px;
+    right: 24px;
+    top: 18px;
+    right: 20px;
+    cursor: pointer;
+  }
+  .sidebar-heading{
+    padding:  20px 20px 19px 20px;
+    border-bottom: 1px solid var(--grayf8);
+  }
+  .sidebar-body{
+    padding: 30px 20px;
+    min-height: calc(100vh - 140px);
+  }
+
+  .sidebar-footer{
+    height: 80px;
+    padding: 16px 20px;
+    border-top: 1px solid var(--grayf8);
+  }
+}
