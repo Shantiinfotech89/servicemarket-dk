@@ -6,7 +6,7 @@ import { Heading6S, Body } from '../../../../assets/styles/Labels';
 // Import scss
 import './MyEmployees.scss';
 // Import Pages
-
+import AddEmployee from './AddEmployee/AddEmployee'
 // Images Imports
 import myInputSearchIcon from '../../../../assets/images/structure/inputsearch-icon.svg'
 import myButtonIcon from '../../../../assets/images/structure/me-button-icon.svg'
@@ -38,7 +38,7 @@ const columns = [
         `${params.row.firstName || ''} ${params.row.lastName || ''}`,
     },
   ];
-  
+
   const rows = [
     { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
     { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
@@ -52,7 +52,7 @@ const columns = [
   ];
 
 function MyEmployees(props) {
-    
+
     return(
         <div className='mmh-container'>
             <div className='my-employees-holder'>
@@ -80,6 +80,7 @@ function MyEmployees(props) {
                     </div>
                 </div>
             </div>
+            <AddEmployee />
         </div>
     )
 }
