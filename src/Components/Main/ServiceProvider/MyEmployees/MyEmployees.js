@@ -14,30 +14,78 @@ import myButtonIcon from '../../../../assets/images/structure/me-button-icon.svg
 
 // Material Ui Imports
 import Box from '@mui/material/Box';
-import { DataGrid } from '@mui/x-data-grid';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+import { styled } from '@mui/material/styles';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Switch from '@mui/material/Switch';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
 
 // local strings Imports
 const strings = require('../../../../localisation_en.json')
 
-const columns = [
-    
-    { field: 'firstName', headerName: 'First name', width: 130 },
-    { field: 'lastName', headerName: 'Last name', width: 130 },
-    { field: 'email', headerName: 'Email',width: 90 },
-    { field: 'services', headerName: 'Services',width: 90 },
-    {
-      field: 'active_inactive',
-      headerName: 'Active / Inactive',
-      description: 'This column has a value getter and is not sortable.',
-      sortable: false,
-      width: 160,
-    },
+  function createData(first_name, last_name, email, services, active_inactive) {
+    return { first_name, last_name, email, services, active_inactive };
+  }
+  
+  const rows = [
+    createData('Kristin', 'Watson', 'kristinwatson@gmail.com', 'Haircut, Haircolor', ''),
+    createData('Esther', 'Howard', 'estherhoward@gmail.com', 'Haircut, Haircolor', ''),
+    createData('Devon', 'Lane', 'devonlane@gmail.com', 'Haircut, Haircolor', ''),
+    createData('Courtney', 'Henry', 'courtneyhenry@gmail.com', 'Haircut, Haircolor', ''),
+    createData('Steward', 'Darrell', 'darrellsteward@gmail.com', 'Haircut, Haircolor', ''),
+    createData('Cody', 'Cody Fisher', 'codyfisher@gmail.com', 'Haircut, Haircolor', ''),
+    createData('Bessie', 'Cooper', 'bessiecooper@gmail.com', 'Haircut, Haircolor', ''),
   ];
 
-  const rows = [
-    { id: 1, lastName: 'Snow', firstName: 'Jon', email: 'kristinwatson@gmail.com', services: 'Haircut, Haircolor', active_inactive: '' },
-    
-  ];
+  const AntSwitch = styled(Switch)(({ theme }) => ({
+    width: 32,
+    height: 18,
+    padding: 0,
+    display: 'flex',
+    '&:active': {
+      '& .MuiSwitch-thumb': {
+        width: 15,
+      },
+      '& .MuiSwitch-switchBase.Mui-checked': {
+        transform: 'translateX(9px)',
+      },
+    },
+    '& .MuiSwitch-switchBase': {
+      padding: 1,
+      '&.Mui-checked': {
+        transform: 'translateX(12px)',
+        color: '#fff',
+        '& + .MuiSwitch-track': {
+          opacity: 1,
+          backgroundColor: theme.palette.mode === 'dark' ? '#ffffff' : '#379F00',
+        },
+      },
+    },
+    '& .MuiSwitch-thumb': {
+      boxShadow: '0 2px 4px 0 rgb(0 35 11 / 20%)',
+      width: 16,
+      height: 16,
+      borderRadius: 8,
+      transition: theme.transitions.create(['width'], {
+        duration: 200,
+      }),
+    },
+    '& .MuiSwitch-track': {
+      borderRadius: 16 / 2,
+      opacity: 1,
+      backgroundColor:
+        theme.palette.mode === 'dark' ? 'rgba(255,255,255,.35)' : 'rgba(187,187,187,1)',
+      boxSizing: 'border-box',
+    },
+  }));
 
 function MyEmployees(props) {
 
@@ -58,20 +106,42 @@ function MyEmployees(props) {
                 </Box>
                 <div className='main-table-holder'>
                     <div className='table-box'>
-                        <DataGrid
-                            rows={rows}
-                            columns={columns}
-                            pageSize={4}
-                            rowsPerPageOptions={[4]}
-                            
-                        />
+                    <TableContainer component={Paper}>
+                        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                            <TableHead>
+                            <TableRow>
+                                <TableCell>First Name</TableCell>
+                                <TableCell align="left">Last Name</TableCell>
+                                <TableCell align="left">Email</TableCell>
+                                <TableCell align="left">Services</TableCell>
+                                <TableCell align="left">Active / Inactive</TableCell>
+                            </TableRow>
+                            </TableHead>
+                            <TableBody>
+                            {rows.map((row) => (
+                                <TableRow
+                                key={row.name}
+                                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                >
+                                <TableCell component="th" scope="row">
+                                    {row.first_name}
+                                </TableCell>
+                                <TableCell align="left">{row.last_name}</TableCell>
+                                <TableCell align="left">{row.email}</TableCell>
+                                <TableCell align="left">{row.services}</TableCell>
+                                <TableCell align="left"><AntSwitch defaultChecked inputProps={{ 'aria-label': 'ant design' }} /></TableCell>
+                                </TableRow>
+                            ))}
+                            </TableBody>
+                        </Table>
+                        </TableContainer>
                     </div>
                 </div>
                 <Box>
                     <Pagination />
                 </Box>
             </div>
-            <AddEmployee />
+            {/* <AddEmployee /> */}
         </div>
     )
 }

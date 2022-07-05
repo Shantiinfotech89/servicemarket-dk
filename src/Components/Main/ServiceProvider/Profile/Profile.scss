@@ -1,0 +1,43 @@
+.profile-main-holder{
+    .upload-img-block{
+        background: var(--white);
+        border: 1px solid var(--graye8);
+        border-radius: 8px;
+        padding: 35px 40px;
+        .upload-img-box{
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            input[type="file"]{
+                position: absolute;
+                top: -9999999;
+                filter: alpha(opacity=0);
+                opacity: 0;
+                width:0;
+                height:0;
+                outline: none;
+                cursor: pointer;
+            }
+            .upload-img{
+                width: 167px;
+                height: 160px;
+                border-radius: 8px;
+            }
+        }
+    }
+    .change-text{
+        position: absolute;
+        right: 10px;
+        top: 20px;
+        cursor: pointer;
+    }
+}
+.white-box{
+    background: var(--white);
+    border: 1px solid var(--graye8);
+    border-radius: 8px;
+    padding: 30px 40px;
+    margin-bottom: 30px;
+}
