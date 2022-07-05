@@ -30,6 +30,16 @@
         border-radius: 8px !important;
         border: 2px solid var(--primary);
     }
+    &.textareafield{
+        .MuiInputBase-formControl::before {
+            height: 85px;
+            border-radius: 8px !important;
+            border: 1px solid var(--graybb) !important;
+        }
+        .MuiInputBase-formControl::after{
+            height: 85px;
+        }
+    }
 }
 .selectfield{
     margin: 0 0 24px 0 !important;

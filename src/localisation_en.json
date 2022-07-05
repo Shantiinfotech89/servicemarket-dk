@@ -91,5 +91,24 @@
   "closed": "Closed",
   "myEmployees": " My Employees",
   "employee": "Employee",
-  "searchDots": "Search..."
+  "searchDots": "Search...",
+  "personalDetail": "Personal Detail",
+  "ownerFirstName": "Owner First Name",
+  "ownerLastName": "Owner Last Name",
+  "change": "Change",
+  "email": "Email",
+  "businessDetail": "Business Detail",
+  "businessName": "Business Name",
+  "businessDescription": "Business Description",
+  "websiteLink": "Website Link",
+  "VATNo": "VAT No.",
+  "address": "Address",
+  "zipcode": "Zipcode",
+  "city": "City",
+  "country": "Country",
+  "primaryCategory": "Primary Category",
+  "secondaryCategory": "Secondary Category",
+  "portfolio": "Portfolio"
+  
+  
 }
