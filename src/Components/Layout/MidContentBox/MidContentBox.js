@@ -9,6 +9,7 @@ import Header from '../../Layout/Header/Header'
 import Sidebar from '../../Layout/Sidebar/Sidebar'
 import Dashboard from '../../../Components/Main/ServiceProvider/Dashboard/Dashboard'
 import BookingCalendar from '../../../Components/Main/ServiceProvider/BookingCalendar/BookingCalendar'
+import ManageServices from '../../../Components/Main/ServiceProvider/ManageServices/ManageServices'
 import MyEmployees from '../../../Components/Main/ServiceProvider/MyEmployees/MyEmployees'
 import Profile from '../../../Components/Main/ServiceProvider/Profile/Profile'
 // Import Material Ui
@@ -51,6 +52,8 @@ function MidContentBox(props) {
             return renderDashboard()
           case MAIN_COMPONENTS_STATE.BOOKINGCALENDAR:
             return renderBookingCalendar();
+          case MAIN_COMPONENTS_STATE.MANAGE_SERVICES:
+            return renderManageServices();  
           case MAIN_COMPONENTS_STATE.MY_EMPLOYEES:
             return renderMyEmployees();    
           case MAIN_COMPONENTS_STATE.PROFILE:
@@ -66,6 +69,9 @@ function MidContentBox(props) {
     }
     function renderBookingCalendar() {
         return <BookingCalendar />
+    }
+    function renderManageServices() {
+      return <ManageServices />
     }
     function renderMyEmployees() {
       return <MyEmployees />

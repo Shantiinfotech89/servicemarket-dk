@@ -108,7 +108,17 @@
   "country": "Country",
   "primaryCategory": "Primary Category",
   "secondaryCategory": "Secondary Category",
-  "portfolio": "Portfolio"
+  "portfolio": "Portfolio",
+  "addCoverImage": "Add cover image",
+  "addCoverImageHereJPGPNGFormat": "Add cover image here JPG/PNG format",
+  "imageRatio": "(Image Ratio 21:9)",
+  "manageServices": "Manage Services",
+  "service": "Service",
+  "activate_Deactivate": "Activate / Deactivate",
+  "servicesDuration": "Services Duration",
+  "price": "Price",
+  "serviceCategory": "Service Category",
+  "serviceName": "Service Name"
   
   
 }
