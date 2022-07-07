@@ -20,4 +20,5 @@ export const MAIN_COMPONENTS_STATE = {
     BOOKINGCALENDAR : "BookingCalendar",
     PROFILE: "Profile",
     MY_EMPLOYEES: "my-employees",
+    MANAGE_SERVICES: "manage-services",
 }

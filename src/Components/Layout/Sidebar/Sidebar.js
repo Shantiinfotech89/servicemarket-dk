@@ -62,7 +62,21 @@ function Sidebar(props) {
                 >
                     <img src={sDatepickerIcon} className="sh-menu-icon" alt='icon' />
                 </div>
-                <div className='sh-menu-list'>
+                <div className={
+                        activeState === MAIN_COMPONENTS_STATE.MANAGE_SERVICES
+                        ? "sh-menu-list active"
+                        : "sh-menu-list"
+                }
+                onClick={() => {
+                    setActiveState(MAIN_COMPONENTS_STATE.MANAGE_SERVICES);
+                    props.setCurrentOpenPage(MAIN_COMPONENTS_STATE.MANAGE_SERVICES);
+                    window.localStorage.setItem("sidebar", MAIN_COMPONENTS_STATE.MANAGE_SERVICES);
+                    history.push({
+                    pathname: "/main-app",
+                    search: "?manage-services",
+                    });
+                }}
+                >
                     <img src={sCategoryIcon} className="sh-menu-icon" alt='icon' />
                 </div>
                 <div className={

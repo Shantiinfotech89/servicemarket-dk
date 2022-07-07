@@ -2,7 +2,7 @@ import { useState } from "react";
 // Styles Imports
 import * as Colors from '../../../../assets/styles/Colors';
 import { PrimaryLarge } from '../../../../assets/styles/Buttons';
-import { Heading6S, LabelWrapper, Body, Small } from '../../../../assets/styles/Labels';
+import { Heading6S, LabelWrapper, Body, Small, Smallest } from '../../../../assets/styles/Labels';
 import { POPUP_TYPE } from '../../../../Helpers/Enums'
 // Scss Imports
 // Import scss
@@ -14,6 +14,8 @@ import profileDefault from '../../../../assets/images/structure/profile-default.
 import prflDetailIcon from '../../../../assets/images/structure/prfl-detail-icon.svg'
 import bussDetailIcon from '../../../../assets/images/structure/buss-detail.svg'
 import portfolioDetailIcon from '../../../../assets/images/structure/portfolio-detail.svg'
+import circleAddBlueIcon from '../../../../assets/images/structure/circle-add-blue.svg'
+
 
 // Material Ui Imports
 import Box from '@mui/material/Box';
@@ -101,6 +103,16 @@ function Profile(props) {
                                 <Heading6S text={strings.businessDetail} color={Colors.black1d} textAlign={'center'} padding={'0px 0 0 8px'} fontWeight={'700'} />
                             </LabelWrapper>
                             <Grid container columnSpacing={2} mt={'25px'}>
+                                <Grid item xs={12}>
+                                    <label className="upload-cover-img">
+                                        <img src={circleAddBlueIcon} />
+                                        <Small text={strings.addCoverImage} color={Colors.primary} fontWeight={'600'}  />
+                                        
+                                        <Smallest text={strings.addCoverImageHereJPGPNGFormat} color={Colors.gray61}  />
+                                        <Smallest text={strings.imageRatio} color={Colors.gray61}  />
+                                        <input type="file" />
+                                    </label>
+                                </Grid>
                                 <Grid item xs={12}>
                                     <Box className="form-group">
                                         <TextField
