@@ -118,7 +118,10 @@
   "servicesDuration": "Services Duration",
   "price": "Price",
   "serviceCategory": "Service Category",
-  "serviceName": "Service Name"
-  
-  
+  "serviceName": "Service Name",
+  "FirstName": "First Name",
+  "LastName": "Last Name",
+  "SelectServices": "Select Services"
+
+
 }

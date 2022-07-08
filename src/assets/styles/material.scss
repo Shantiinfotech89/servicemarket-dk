@@ -1,15 +1,15 @@
-.textfield{
+.textfield {
     margin: 0 0 24px 0 !important;
     width: 100% !important;
-    .MuiInputBase-formControl{
+    .MuiInputBase-formControl {
         border-radius: 8px !important;
         background-color: var(--white) !important;
     }
-    .MuiFormLabel-colorPrimary{
+    .MuiFormLabel-colorPrimary {
         color: rgba(128, 128, 128, 1);
         font-size: 14px;
         line-height: 24px;
-        &.Mui-focused{
+        &.Mui-focused {
             color: rgba(0, 180, 189, 1);
             font-size: 12px;
         }
@@ -17,43 +17,44 @@
             font-size: 12px;
         }
     }
-    .MuiInputLabel-asterisk{
+    .MuiInputLabel-asterisk {
         color: rgba(206, 21, 0, 1);
     }
-    .MuiInputBase-formControl::before{
+    .MuiInputBase-formControl::before {
         height: 54px;
         border-radius: 8px !important;
         border: 1px solid var(--graybb) !important;
     }
-    .MuiInputBase-formControl::after{
+    .MuiInputBase-formControl::after {
         height: 52px;
         border-radius: 8px !important;
         border: 2px solid var(--primary);
     }
-    &.textareafield{
+    &.textareafield {
         .MuiInputBase-formControl::before {
             height: 85px;
             border-radius: 8px !important;
             border: 1px solid var(--graybb) !important;
         }
-        .MuiInputBase-formControl::after{
+        .MuiInputBase-formControl::after {
             height: 85px;
         }
     }
 }
-.selectfield{
+
+.selectfield {
     margin: 0 0 24px 0 !important;
     width: 100% !important;
     border-radius: 8px;
-    .MuiInputBase-formControl{
+    .MuiInputBase-formControl {
         border-radius: 8px !important;
         background-color: var(--white) !important;
     }
-    .MuiFormLabel-colorPrimary{
+    .MuiFormLabel-colorPrimary {
         color: rgba(128, 128, 128, 1);
         font-size: 14px;
         line-height: 24px;
-        &.Mui-focused{
+        &.Mui-focused {
             color: rgba(0, 180, 189, 1);
             font-size: 12px;
         }
@@ -61,28 +62,28 @@
             font-size: 12px;
         }
     }
-    .MuiInputLabel-asterisk{
+    .MuiInputLabel-asterisk {
         color: rgba(206, 21, 0, 1);
     }
-    .MuiInputBase-formControl::before{
+    .MuiInputBase-formControl::before {
         height: 54px;
         border-radius: 8px !important;
         border: 1px solid var(--graybb) !important;
     }
-    .MuiInputBase-formControl::after{
+    .MuiInputBase-formControl::after {
         height: 52px;
         border-radius: 8px !important;
         border: 2px solid var(--primary);
     }
-    .MuiSelect-filled{
+    .MuiSelect-filled {
         text-align: left;
     }
-    .MuiInputBase-colorPrimary{
-        &.Mui-focused{
+    .MuiInputBase-colorPrimary {
+        &.Mui-focused {
             background-color: var(--white) !important;
         }
     }
-    .MuiSelect-select{
+    .MuiSelect-select {
         padding-top: 24px !important;
         border-radius: 8px !important;
         padding-bottom: 8px;
@@ -90,32 +91,32 @@
         font-size: 14px;
         font-weight: 600;
         background-color: transparent !important;
-        [data-testid="CheckIcon"]{
+        [data-testid="CheckIcon"] {
             display: none;
         }
     }
-    .MuiOutlinedInput-root{
-        &:hover{
-            .MuiOutlinedInput-notchedOutline{
+    .MuiOutlinedInput-root {
+        &:hover {
+            .MuiOutlinedInput-notchedOutline {
                 border-color: var(--graybb) !important;
             }
         }
-        &.Mui-focused{
-            .MuiOutlinedInput-notchedOutline{
+        &.Mui-focused {
+            .MuiOutlinedInput-notchedOutline {
                 border-color: var(--primary) !important;
             }
         }
     }
-
-    .MuiOutlinedInput-notchedOutline{
+    .MuiOutlinedInput-notchedOutline {
         top: 0px;
-        legend{
+        legend {
             display: none;
         }
     }
 }
-.inputs-group{
-    .selectfield{
+
+.inputs-group {
+    .selectfield {
         margin: 0 0 20px 0 !important;
     }
     .selectfield .MuiInputBase-formControl::before {
@@ -133,18 +134,20 @@
         font-weight: 600;
         background-color: transparent !important;
     }
-    .selectfield .MuiFormLabel-colorPrimary{
+    .selectfield .MuiFormLabel-colorPrimary {
         transform: translate(12px, 9px) scale(1);
     }
     .selectfield .MuiFormLabel-colorPrimary.MuiFormLabel-filled {
         font-size: 0px;
     }
 }
-.MuiPopover-paper, .MuiAutocomplete-paper{
+
+.MuiPopover-paper,
+.MuiAutocomplete-paper {
     border: 1px solid var(--graybb) !important;
-    .MuiList-padding{
+    .MuiList-padding {
         padding: 0 0 !important;
-        .MuiMenuItem-root{
+        .MuiMenuItem-root {
             padding: 14px 20px !important;
             border-bottom: 1px solid var(--graybb) !important;
             display: flex;
@@ -152,121 +155,131 @@
             justify-content: space-between;
             font-size: 14px !important;
             color: var(--gray61) !important;
-            &:hover{
+            &:hover {
                 background-color: transparent !important;
             }
-            &:last-child{
+            &:last-child {
                 border-bottom: none !important;
             }
-            [data-testid="CheckIcon"]{
+            [data-testid="CheckIcon"] {
                 display: none;
             }
-            &.Mui-selected{
+            &.Mui-selected {
                 background-color: transparent !important;
-                [data-testid="CheckIcon"]{
+                [data-testid="CheckIcon"] {
                     color: var(--primary);
                     display: flex;
                 }
                 color: var(--black1d) !important;
             }
-            .MuiCheckbox-colorPrimary{
+            .MuiCheckbox-colorPrimary {
                 padding: 0px 10px 0px 0px;
             }
         }
     }
 }
-.Mui-checked{
+
+.Mui-checked {
     color: var(--primary) !important;
 }
-.form-group{
+
+.form-group {
     position: relative;
-    .eye-icon{
-      position: absolute;
-      right: 7px;
-      top:8px;
+    .eye-icon {
+        position: absolute;
+        right: 7px;
+        top: 8px;
     }
-    .ipnputlabel{
+    .ipnputlabel {
         margin: 2px 0 4px 0 !important;
         position: absolute;
         bottom: 0px;
     }
 }
-.header-right{
-    .MuiButton-text{
+
+.header-right {
+    .MuiButton-text {
         padding: 0 !important;
-       &:hover {
+        &:hover {
             -webkit-text-decoration: none;
             text-decoration: none;
             background-color: transparent !important;
         }
     }
 }
-#basic-menu{
-    .MuiPaper-elevation{
+
+#basic-menu {
+    .MuiPaper-elevation {
         top: 70px !important;
         left: unset !important;
         right: 10px !important;
-        .MuiMenuItem-root{
+        .MuiMenuItem-root {
             color: var(--black1d) !important;
             justify-content: flex-start;
-            .profile-dropd-icon{
+            .profile-dropd-icon {
                 margin-right: 8px;
             }
         }
     }
 }
+
 // modal css
-.maxwidth430{
-  max-width: 430px !important;
-  width: 100%;
-  margin:auto !important;
-  border-radius: 1rem;
-  .MuiDialogContent-root{
-    padding:30px 60px 30px 30px !important;
-  }
-}
-.maxwidth420{
-  max-width: 420px !important;
-  width: 100%;
-  margin:auto !important;
-  border-radius: 1rem;
-  text-align: center;
-  .success-icon{
-    margin-bottom: 20px;
-    margin-top:10px;
-    width:220px;
-    height:97px;object-fit: contain;
-  }
-}
-.maxwidth470,.MuiDialog-paperWidthSm{
-  max-width: 470px !important;
-  width: 100%;
-  margin:auto !important;
-  border-radius: 1rem;
-  .MuiDialogContent-root{
-    padding:30px 30px 30px 30px;
-    .modal-close{
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      width: 24px;
-      height: 24px;
-      object-fit: contain;
-      cursor: pointer;
+.maxwidth430 {
+    max-width: 430px !important;
+    width: 100%;
+    margin: auto !important;
+    border-radius: 1rem;
+    .MuiDialogContent-root {
+        padding: 30px 60px 30px 30px !important;
     }
-    .textfield{
-      margin: 0px 0px 24px 0px !important;
-    }
-    .form-group{
-      .ipnputlabel{
-          bottom: auto;
-          top: 57px;
-      }
-    }
-  }
 }
+
+.maxwidth420 {
+    max-width: 420px !important;
+    width: 100%;
+    margin: auto !important;
+    border-radius: 1rem;
+    text-align: center;
+    .success-icon {
+        margin-bottom: 20px;
+        margin-top: 10px;
+        width: 220px;
+        height: 97px;
+        object-fit: contain;
+    }
+}
+
+.maxwidth470,
+.MuiDialog-paperWidthSm {
+    max-width: 470px !important;
+    width: 100%;
+    margin: auto !important;
+    border-radius: 1rem;
+    .MuiDialogContent-root {
+        padding: 30px 30px 30px 30px;
+        .modal-close {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            cursor: pointer;
+        }
+        .textfield {
+            margin: 0px 0px 24px 0px !important;
+        }
+        .form-group {
+            .ipnputlabel {
+                bottom: auto;
+                top: 57px;
+            }
+        }
+    }
+}
+
 .react-tel-input {
-    .form-control{
+    .form-control {
         border: 1px solid var(--graybb) !important;
         border-radius: 8px !important;
         height: 55px !important;
@@ -275,16 +288,16 @@
         font-family: 'Muli';
         padding-left: 96px !important;
     }
-    .flag-dropdown{
+    .flag-dropdown {
         background-color: var(--grayf8) !important;
         border: 1px solid var(--graybb) !important;
         border-radius: 8px 0 0 8px !important;
-        .selected-flag{
+        .selected-flag {
             width: 80px !important;
             height: 100% !important;
             padding: 0 0 0 16px !important;
             border-radius: 8px 0 0 8px !important;
-            .arrow{
+            .arrow {
                 left: 30px;
                 width: 0;
                 height: 0;
@@ -294,29 +307,29 @@
             }
         }
     }
-    .country-list{
+    .country-list {
         width: 320px !important;
         max-height: 120px !important;
         margin: 2px 0 10px 0px !important;
         text-align: left !important;
         border-radius: 8px !important;
         border: 1px solid var(--graybb) !important;
-        .country{
+        .country {
             padding: 12px 20px !important;
-            .flag{
+            .flag {
                 margin-right: 20px;
                 margin-top: 0px;
             }
-            .country-name{
+            .country-name {
                 color: var(--gray61) !important;
             }
-            .dial-code{
+            .dial-code {
                 color: var(--gray61) !important;
             }
-            &.highlight{
+            &.highlight {
                 position: relative;
                 background-color: transparent !important;
-                &::after{
+                &::after {
                     content: '';
                     width: 24px;
                     height: 24px;
@@ -325,10 +338,10 @@
                     right: 12px;
                     top: 12px;
                 }
-                .country-name{
+                .country-name {
                     color: var(--black1d) !important;
                 }
-                .dial-code{
+                .dial-code {
                     color: var(--black1d) !important;
                 }
             }
@@ -337,34 +350,47 @@
 }
 
 // side bar scss
-.sidebar-right{
-  width: 350px;
-  height: 100vh;
-  box-shadow: 0px 0px 12px 0px #00000033;
-  background: var(--white);
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  .sidebar-close{
-    position: absolute;
-    width: 24px;
-    right: 24px;
-    top: 18px;
-    right: 20px;
-    cursor: pointer;
-  }
-  .sidebar-heading{
-    padding:  20px 20px 19px 20px;
-    border-bottom: 1px solid var(--grayf8);
-  }
-  .sidebar-body{
-    padding: 30px 20px;
-    min-height: calc(100vh - 140px);
-  }
+.sideBarParent {
+    position: fixed;
+    top: 0px;
+    //   right: -355px;
+    z-index: 1000;
+    right: 0px;
+    visibility: visible;
+    opacity: 1;
+    will-change: opacity;
+    transition: all 400ms;
+    &.show {
+        right: 0px;
+        visibility: visible;
+        opacity: 1;
+    }
+}
 
-  .sidebar-footer{
-    height: 80px;
-    padding: 16px 20px;
-    border-top: 1px solid var(--grayf8);
-  }
+.sidebar-right {
+    width: 350px;
+    height: 100vh;
+    box-shadow: 0px 0px 12px 0px #00000033;
+    background: var(--white);
+    .sidebar-close {
+        position: absolute;
+        width: 24px;
+        right: 24px;
+        top: 18px;
+        right: 20px;
+        cursor: pointer;
+    }
+    .sidebar-heading {
+        padding: 20px 20px 19px 20px;
+        border-bottom: 1px solid var(--grayf8);
+    }
+    .sidebar-body {
+        padding: 30px 20px;
+        min-height: calc(100vh - 140px);
+    }
+    .sidebar-footer {
+        height: 80px;
+        padding: 16px 20px;
+        border-top: 1px solid var(--grayf8);
+    }
 }

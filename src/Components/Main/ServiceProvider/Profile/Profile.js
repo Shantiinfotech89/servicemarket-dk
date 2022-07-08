@@ -107,7 +107,7 @@ function Profile(props) {
                                     <label className="upload-cover-img">
                                         <img src={circleAddBlueIcon} />
                                         <Small text={strings.addCoverImage} color={Colors.primary} fontWeight={'600'}  />
-                                        
+
                                         <Smallest text={strings.addCoverImageHereJPGPNGFormat} color={Colors.gray61}  />
                                         <Smallest text={strings.imageRatio} color={Colors.gray61}  />
                                         <input type="file" />
@@ -244,9 +244,9 @@ function Profile(props) {
                                         />
                                     </Box>
                                 </Grid>
-                                
-                                
-                                
+
+
+
                             </Grid>
                         </div>
                         <Box display={'flex'} justifyContent={'flex-end'} mb={'20px'}>
