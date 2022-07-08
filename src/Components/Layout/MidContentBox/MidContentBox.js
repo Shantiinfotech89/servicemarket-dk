@@ -39,7 +39,7 @@ function MidContentBox(props) {
           setCurrentOpenPage(MAIN_COMPONENTS_STATE.BOOKINGCALENDAR);
         } else {
           let sideBar = window.localStorage.getItem("sidebar");
-    
+
           if (sideBar != null) {
             setCurrentOpenPage(sideBar);
           }
@@ -53,12 +53,12 @@ function MidContentBox(props) {
           case MAIN_COMPONENTS_STATE.BOOKINGCALENDAR:
             return renderBookingCalendar();
           case MAIN_COMPONENTS_STATE.MANAGE_SERVICES:
-            return renderManageServices();  
+            return renderManageServices();
           case MAIN_COMPONENTS_STATE.MY_EMPLOYEES:
-            return renderMyEmployees();    
+            return renderMyEmployees();
           case MAIN_COMPONENTS_STATE.PROFILE:
             return renderProfile();
-          
+
           default:
             break;
         }
@@ -96,10 +96,10 @@ function MidContentBox(props) {
           loading={props.loading}
           speedMultiplier={1.5}
           />
-      </div> 
+      </div>
       }
       else {
-   
+
 
     return(
         <div className='main-app-holder'>
@@ -113,7 +113,3 @@ function MidContentBox(props) {
 }
 }
 export default MidContentBox
-
-
-
-    
