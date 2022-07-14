@@ -1,13 +1,17 @@
+import React, { useState, useEffect } from 'react'
 // Styles Imports
 import * as Colors from '../../../assets/styles/Colors';
 import {  Heading2B, LabelInput, Body } from '../../../assets/styles/Labels';
 import { PrimaryLarge } from '../../../assets/styles/Buttons';
+import { POPUP_TYPE } from '../../../Helpers/Enums'
 // Images Imports
 import Visibility from '../../../assets/images/structure/Visibility.svg';
 import VisibilityOff from '../../../assets/images/structure/VisibilityOff.svg';
 import ModalClose from '../../../assets/images/structure/modal-close-icon.svg';
+// Pages Imports
+import AllPopups from '../../AllPopups';
+import ForgotPassword from '../ForgotPassword/ForgotPassword';
 // Material Ui Imports
-import * as React from 'react';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
@@ -16,7 +20,8 @@ import TextField from '@mui/material/TextField';
 const strings = require('../../../localisation_en.json')
 
 function Login(props) {
-
+  const [popupOpen, setPopupOpen] = useState(false);
+  const [popupType, setPopupType] = useState("");
   const [values, setValues] = React.useState({
     showPassword: false,
   });
@@ -29,6 +34,13 @@ function Login(props) {
       showPassword: !values.showPassword,
     });
   };
+  function ForgotPasswordPopupOpen() {
+    setPopupType(POPUP_TYPE.FORGOT_PASSWORD);
+    setPopupOpen(true);
+  }
+
+
+ 
   return (
         <div className="ph-container-box">
             <div className="ph-paper-box width470">
@@ -65,7 +77,9 @@ function Login(props) {
                     {values.showPassword ? <img src={VisibilityOff} alt=".." /> : <img src={Visibility} alt=".." />}
                   </IconButton>
                 </Box>
-                <Body text={strings.forgotPassword} color={Colors.gray61} textAlign={'right'} cursor={'pointer'} margin={'0px 0px 24px 0px'} />
+                <Body text={strings.forgotPassword} color={Colors.gray61} textAlign={'right'} cursor={'pointer'} margin={'0px 0px 24px 0px'} onClick={(() => props.closePopup(), ForgotPasswordPopupOpen) } />
+
+                
                 <PrimaryLarge text={strings.Login} color={Colors.white} />
                 <Box display="flex" justifyContent="center" alignItems="center" pt={'30px'}>
                   <Body text={strings.dontHaveAnAccount} color={Colors.gray61} />
@@ -73,6 +87,12 @@ function Login(props) {
                 </Box>
               </form>
             </div>
+            <AllPopups
+                popupIsOpen={popupOpen}
+                style={popupType}
+                closePopup={() => setPopupOpen(false)}
+            />
+            
         </div>
   )
 }

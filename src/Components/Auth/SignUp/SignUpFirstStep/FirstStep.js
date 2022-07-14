@@ -22,6 +22,7 @@ const strings = require('../../../../localisation_en.json')
 function FirstStep(props) {
   const [popupOpen, setPopupOpen] = useState(false);
   const [popupType, setPopupType] = useState("");
+
   const history = useHistory();
   const handleClick = () => {
     history.push("/signup2");
@@ -30,6 +31,7 @@ function FirstStep(props) {
     setPopupType(POPUP_TYPE.LOGIN);
     setPopupOpen(true);
   }
+
 
 return (
 
@@ -78,7 +80,9 @@ return (
           popupIsOpen={popupOpen}
           style={popupType}
           closePopup={() => setPopupOpen(false)}
+          
       />
+    
     </div>
 
   )
