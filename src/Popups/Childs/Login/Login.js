@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+
 // Styles Imports
 import * as Colors from '../../../assets/styles/Colors';
 import {  Heading2B, LabelInput, Body } from '../../../assets/styles/Labels';
@@ -10,8 +10,10 @@ import VisibilityOff from '../../../assets/images/structure/VisibilityOff.svg';
 import ModalClose from '../../../assets/images/structure/modal-close-icon.svg';
 // Pages Imports
 import AllPopups from '../../AllPopups';
-import ForgotPassword from '../ForgotPassword/ForgotPassword';
+// import ForgotPassword from '../ForgotPassword/ForgotPassword';
 // Material Ui Imports
+import React, { useState } from 'react'
+import { useHistory } from "react-router-dom";
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
@@ -40,7 +42,12 @@ function Login(props) {
   }
 
 
- 
+  let history = useHistory();
+  const handleClickSignUp = () => {
+    history.push("/signup");
+    setPopupOpen(false);
+  }
+
   return (
         <div className="ph-container-box">
             <div className="ph-paper-box width470">
@@ -79,11 +86,11 @@ function Login(props) {
                 </Box>
                 <Body text={strings.forgotPassword} color={Colors.gray61} textAlign={'right'} cursor={'pointer'} margin={'0px 0px 24px 0px'} onClick={(() => props.closePopup(), ForgotPasswordPopupOpen) } />
 
-                
+
                 <PrimaryLarge text={strings.Login} color={Colors.white} />
                 <Box display="flex" justifyContent="center" alignItems="center" pt={'30px'}>
                   <Body text={strings.dontHaveAnAccount} color={Colors.gray61} />
-                  <Body text={strings.createNewAccount} color={Colors.primary} margin={'0px 0px 0px 4px'} cursor={'pointer'} />
+                  <Body text={strings.createNewAccount} color={Colors.primary} margin={'0px 0px 0px 4px'} cursor={'pointer'} onClick={handleClickSignUp} />
                 </Box>
               </form>
             </div>
@@ -92,7 +99,7 @@ function Login(props) {
                 style={popupType}
                 closePopup={() => setPopupOpen(false)}
             />
-            
+
         </div>
   )
 }

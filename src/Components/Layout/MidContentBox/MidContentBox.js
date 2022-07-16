@@ -5,13 +5,15 @@ import { MAIN_COMPONENTS_STATE } from "../../../Helpers/Enums";
 // Import scss
 import './MidContentBox.scss';
 // Import Pages
-import Header from '../../Layout/Header/Header'
-import Sidebar from '../../Layout/Sidebar/Sidebar'
-import Dashboard from '../../../Components/Main/ServiceProvider/Dashboard/Dashboard'
-import BookingCalendar from '../../../Components/Main/ServiceProvider/BookingCalendar/BookingCalendar'
-import ManageServices from '../../../Components/Main/ServiceProvider/ManageServices/ManageServices'
-import MyEmployees from '../../../Components/Main/ServiceProvider/MyEmployees/MyEmployees'
-import Profile from '../../../Components/Main/ServiceProvider/Profile/Profile'
+import Header from '../../Layout/Header/Header';
+import Sidebar from '../../Layout/Sidebar/Sidebar';
+import Dashboard from '../../../Components/Main/ServiceProvider/Dashboard/Dashboard';
+import BookingCalendar from '../../../Components/Main/ServiceProvider/BookingCalendar/BookingCalendar';
+import ManageServices from '../../../Components/Main/ServiceProvider/ManageServices/ManageServices';
+import MyEmployees from '../../../Components/Main/ServiceProvider/MyEmployees/MyEmployees';
+import MySubscription from '../../../Components/Main/ServiceProvider/MySubscription/MySubscription';
+import Profile from '../../../Components/Main/ServiceProvider/Profile/Profile';
+import Subscription from '../../../Components/Main/ServiceProvider/Subscription/Subscription';
 // Import Material Ui
 import BounceLoader from "react-spinners/BounceLoader";
 import { css } from "@emotion/react";
@@ -49,15 +51,25 @@ function MidContentBox(props) {
     function renderMainComponent() {
         switch (currentOpenPage) {
           case MAIN_COMPONENTS_STATE.DASHBOARD:
-            return renderDashboard()
+            return renderDashboard();
+
           case MAIN_COMPONENTS_STATE.BOOKINGCALENDAR:
             return renderBookingCalendar();
+
           case MAIN_COMPONENTS_STATE.MANAGE_SERVICES:
             return renderManageServices();
+
           case MAIN_COMPONENTS_STATE.MY_EMPLOYEES:
             return renderMyEmployees();
+
+          case MAIN_COMPONENTS_STATE.MY_SUBSCRIPTION:
+            return renderMySubscription();
+
           case MAIN_COMPONENTS_STATE.PROFILE:
             return renderProfile();
+
+          case MAIN_COMPONENTS_STATE.SUBSCRIPTION:
+            return renderSubscription();
 
           default:
             break;
@@ -76,9 +88,15 @@ function MidContentBox(props) {
     function renderMyEmployees() {
       return <MyEmployees />
     }
+    function renderMySubscription() {
+      return <MySubscription />
+    }
     function renderProfile() {
         return <Profile />
     }
+    function renderSubscription() {
+      return <Subscription />
+  }
 
     useEffect(() => {
         const loadData = async () => {

@@ -109,7 +109,7 @@ export function PrimarySmall(props) {
     return <ButtonProvider
     fontSize = { props.fontSize }
     fontWeight = { props.fontWeight }
-    padding = { '8px 16px' }
+    padding = { '5px 16px 8px 16px' }
     margin = { props.margin }
     flexGrow = { props.flexGrow }
     background = { 'linear-gradient(96.22deg, #13E173 27.28%, #02CDFF 110.27%);' }
@@ -170,14 +170,17 @@ export function PrimaryOutlineSmall(props) {
     return <ButtonProvider
     fontSize = { '14px' }
     fontWeight = { props.fontWeight }
-    padding = { '8px 16px' }
+    padding = { '5px 16px 8px 16px' }
     margin = { props.margin }
     flexGrow = { props.flexGrow }
     background = { 'transparent' }
-    color = { Colors.primary }
+    // color = { Colors.primary }
+    color = { Colors.gray61 }
     borderRadius = { '8px' }
     borderWidth = { '1px' }
-    borderColor = { Colors.primary }
+    // borderColor = { Colors.primary }
+    borderStyle = { 'solid' }
+    borderColor = { Colors.gray61 }
     textAlign = { 'center' }
     width = { props.width }
     height = { '36px' }

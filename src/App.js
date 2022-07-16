@@ -11,6 +11,7 @@ import ThirdStep from './Components/Auth/SignUp/SignUpThirdStep/ThirdStep';
 import FourthStep from './Components/Auth/SignUp/SignUpFourthStep/FourthStep';
 import AllPopups from './Popups/AllPopups';
 import Profile from './Components/Main/ServiceProvider/Profile/Profile';
+import Subscription from './Components/Main/ServiceProvider/Subscription/Subscription';
 import MidContentBox from './Components/Layout/MidContentBox/MidContentBox';
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
           <Route exact path="/signup4" render={(props) => <FourthStep {...props} />} />
           <Route exact path="/AllPopups" render={(props) => <AllPopups {...props} />} />
           <Route exact path="/profile" render={(props) => <Profile {...props} />} />
+          <Route exact path="/subscription" render={(props) => <Subscription {...props} />} />
           <Route exact path="/main-app" render={(props) => <MidContentBox {...props} />} />
         </Switch>
       </Router>

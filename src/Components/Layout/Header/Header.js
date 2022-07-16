@@ -6,7 +6,7 @@ import * as Colors from '../../../assets/styles/Colors';
 import { Small, Smallest } from '../../../assets/styles/Labels';
 // Import scss
 import './Header.scss';
-// Import Images 
+// Import Images
 import headerLogo from '../../../assets/images/logo/header-logo.svg'
 import userProfileImg from '../../../assets/images/product/user-profile.png'
 import myProfileIcon from '../../../assets/images/structure/my-profile-icon.svg'
@@ -40,7 +40,7 @@ const handleClose = () => {
     return(
         <div className="header-holder">
             <div className='header-left'>
-                <img src={headerLogo} alt="picture" className='header-logo' />
+                <img src={headerLogo} alt="..." className='header-logo' />
                 <span className='dasboard-name'>{strings.serviceMarket}</span>
             </div>
             <div className='header-right'>
@@ -76,7 +76,7 @@ const handleClose = () => {
                     </div>
                 </div>
                 <div className='notification-box'>
-                    <img src={notificationIcon} alt="picture" className='notification-icon' />
+                    <img src={notificationIcon} alt="..." className='notification-icon' />
                 </div>
                 <div className='profile-box'>
                     <Button
@@ -87,7 +87,7 @@ const handleClose = () => {
                         onClick={handleClick}
                         endIcon={<KeyboardArrowDownIcon />}
                     >
-                        <img src={userProfileImg} alt="picture" className='user-profile-img' />
+                        <img src={userProfileImg} alt="..." className='user-profile-img' />
                     </Button>
                     <Menu
                         id="basic-menu"
@@ -98,7 +98,7 @@ const handleClose = () => {
                         'aria-labelledby': 'basic-button',
                         }}
                     >
-                        <MenuItem 
+                        <MenuItem
                             onClick={() => {
                                 setActiveState(MAIN_COMPONENTS_STATE.PROFILE);
                                 props.setCurrentOpenPage(MAIN_COMPONENTS_STATE.PROFILE);
@@ -108,8 +108,8 @@ const handleClose = () => {
                                 search: "?profile",
                                 });
                             }}
-                        > <img src={myProfileIcon} alt="picture" className='profile-dropd-icon' /> {strings.myProfile}</MenuItem>
-                        <MenuItem onClick={handleClose}> <img src={settingIcon} alt="picture" className='profile-dropd-icon' /> {strings.settings}</MenuItem>
+                        > <img src={myProfileIcon} alt="..." className='profile-dropd-icon' />{strings.myProfile}</MenuItem>
+                        <MenuItem onClick={handleClose}><img src={settingIcon} alt="..." className='profile-dropd-icon' />{strings.settings}</MenuItem>
                     </Menu>
                 </div>
             </div>

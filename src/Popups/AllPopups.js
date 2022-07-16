@@ -15,6 +15,7 @@ import LogoutModal from './Childs/LogoutModal/LogoutModal';
 import CancelSubscription from './Childs/CancelSubscription/CancelSubscription';
 import UpdateChangeCard from './Childs/UpdateChangeCard/UpdateChangeCard';
 import ChatComfirmationModal from './Childs/ChatComfirmationModal/ChatComfirmationModal';
+import PaymentSubscription from './Childs/PaymentSubscription/PaymentSubscription';
 
 // local strings Imports
 
@@ -109,6 +110,13 @@ function AllPopups(props) {
       case POPUP_TYPE.CHAT_COMFIRMATION_MODAL:
         return(
           <ChatComfirmationModal
+            closePopup={() => props.closePopup()}
+            popupIsOpen={props.popupOpen}
+          />
+        );
+      case POPUP_TYPE.PAYMENT_SUBSCRIPTION:
+        return(
+          <PaymentSubscription
             closePopup={() => props.closePopup()}
             popupIsOpen={props.popupOpen}
           />
