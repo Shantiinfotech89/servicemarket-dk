@@ -16,6 +16,13 @@
        url('./assets/fonts/Muli-Bold.ttf');
 }
 
+@font-face {
+  font-family: 'DMSerifDisplay-Regular';
+  font-weight: 700;
+  src: local('DMSerifDisplay-Regular'),
+       url('./assets/fonts/DMSerifDisplay-Regular.ttf');
+}
+
 :root {
   --white: #ffffff;
   --black1d: #1D1C1D;

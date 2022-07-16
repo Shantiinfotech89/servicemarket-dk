@@ -96,7 +96,21 @@ function Sidebar(props) {
                 >
                     <img src={sUserIcon} className="sh-menu-icon" alt='icon' />
                 </div>
-                <div className='sh-menu-list'>
+                <div className={
+                        activeState === MAIN_COMPONENTS_STATE.MY_SUBSCRIPTION
+                        ? "sh-menu-list active"
+                        : "sh-menu-list"
+                    }
+                    onClick={() => {
+                        setActiveState(MAIN_COMPONENTS_STATE.MY_SUBSCRIPTION);
+                        props.setCurrentOpenPage(MAIN_COMPONENTS_STATE.MY_SUBSCRIPTION);
+                        window.localStorage.setItem("sidebar", MAIN_COMPONENTS_STATE.MY_SUBSCRIPTION);
+                        history.push({
+                        pathname: "/main-app",
+                        search: "?my-subscription",
+                        });
+                    }}
+                >
                     <img src={sSubscriptionIcon} className="sh-menu-icon" alt='icon' />
                 </div>
             </div>

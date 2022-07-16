@@ -114,7 +114,6 @@
         }
     }
 }
-
 .inputs-group {
     .selectfield {
         margin: 0 0 20px 0 !important;
@@ -141,6 +140,33 @@
         font-size: 0px;
     }
 }
+
+
+.form-group.add-info-tool{
+  .MuiSelect-select{
+    padding-right:80px !important;
+  }
+  .MuiSvgIcon-root{
+    right:55px !important;
+  }
+  .info-box{
+    position:absolute;
+    right: 2px;
+    top:1px;
+    width: 48px;
+    height: 52px;
+    background-color: var(--grayf8);
+    border-radius: 0px .5rem .5rem 0px;
+    z-index: 0;
+    object-fit: none;
+    cursor: pointer;
+    .info-cion{
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
 
 .MuiPopover-paper,
 .MuiAutocomplete-paper {
@@ -393,4 +419,40 @@
         padding: 16px 20px;
         border-top: 1px solid var(--grayf8);
     }
+}
+
+.MuiTooltip-tooltip{
+  background-color: var(--white) !important;
+  color: var(--black1d) !important;
+  border:1px solid var(--graye8) !important;
+  max-width: 175px !important;
+  font-size: 12px !important;
+  margin: 0px 0px !important;
+  .MuiTooltip-arrow{
+    color: var(--white) !important;
+    &:before{
+        border:1px solid var(--graye8) !important;
+    }
+  }
+}
+
+// Alert
+.MuiAlert-standard{
+  position: fixed;
+  right: 30px;
+  top: 80px;
+  width: 430px;
+  border-radius: 0.5rem;
+  z-index: 9;
+  .MuiAlert-message{
+    padding:7px 0px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  &.MuiAlert-standardSuccess{
+    background-color: #EDF7ED;
+    .MuiAlert-message{
+      color: #1E4620;
+    }
+  }
 }

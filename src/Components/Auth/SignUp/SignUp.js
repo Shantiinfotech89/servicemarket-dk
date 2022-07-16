@@ -1,6 +1,9 @@
 // Styles Imports
 import * as Colors from '../../../assets/styles/Colors';
 import { Heading1B, Heading4B, LabelWrapper, Body } from '../../../assets/styles/Labels';
+
+// import header
+import FHeader from '../../Layout/FHeader/FHeader';
 // Scss Imports
 import './SignUp.scss';
 // Images Imports
@@ -19,12 +22,13 @@ function SignUp(props) {
     history.push("/signup1");
   }
 return (
-
+    <>
+    <FHeader />
     <div className="auth-holder">
       <Grid container justifyContent="center" direction="column" alignItems="center">
-        <Grid item xs={4} pt={'60px'}>
+        <Grid item xs={12} pt={'0px'}>
           <div className="auth-box">
-            <img src={authLogo} className="auth-top-logo" alt='pics' />
+            {/*<img src={authLogo} className="auth-top-logo" alt='pics' />*/}
             <Heading1B text={strings.signUp} color={Colors.black1d} padding={'0 0 8px 0'} textAlign={'center'} />
             <LabelWrapper justifyContent={'center'} padding={'0 0 30px 0'} textAlign={'center'}>
               <Body text={strings.weSuggestUsingThe} color={Colors.black45} padding={'0 2px'} />
@@ -53,19 +57,18 @@ return (
               </div>
             </div>
           </div>
-        </Grid>
-        <Grid item xs={4}>
           <div className="auth-box-bottom">
-            <LabelWrapper padding={'125px 0 0 0'}>
-              <Body text={strings.privacyTerms} color={Colors.gray61} padding={'0 4px'} cursor={'pointer'} />
+            <LabelWrapper>
+              <Body text={strings.privacyTerms} color={Colors.gray61} padding={'0 4px'} cursor={'pointer'} fontSize={'12px'} />
               <Body text={'|'} color={Colors.gray61} padding={'0 2px'} />
-              <Body text={strings.contactUs} color={Colors.gray61} fontWeight={'600'} padding={'0 4px'} cursor={'pointer'} />
+              <Body text={strings.contactUs} color={Colors.gray61} padding={'0 4px'} cursor={'pointer'} fontSize={'12px'} />
             </LabelWrapper>
           </div>
         </Grid>
+
       </Grid>
     </div>
-
+    </>
   )
 }
 

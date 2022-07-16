@@ -13,6 +13,7 @@ const strings = require('../../../localisation_en.json')
 function VerifyOTP(props) {
 
   return (
+    <>
       <div className="ph-container-box">
         <div className="ph-paper-box width470">
           <img src={ModalClose} alt="..." className="modal-close" onClick={() => props.closePopup()} />
@@ -41,6 +42,7 @@ function VerifyOTP(props) {
           </form>
         </div>
       </div>
+      </>
   )
 }
 

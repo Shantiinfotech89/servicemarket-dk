@@ -1,0 +1,96 @@
+.footer-holder {
+    padding: 0px 30px 0px 30px;
+    border-radius: 24px;
+    background: var(--grayf8);
+    box-sizing: border-box;
+    width: calc(100% - 60px);
+    margin: 100px auto 30px auto;
+    z-index: 999;
+    .top-footer {
+        background: var(--primary);
+        min-height: 200px;
+        padding: 30px 40px 40px 30px;
+        border-radius: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        top: -100px;
+        .footer-heading1{
+          position: relative;
+          margin-top: -7px;
+          font-family: 'DMSerifDisplay-Regular';
+        }
+        .right-side-input-box {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-left: 40px;
+            padding-top: 10px;
+            input {
+                width: 300px;
+                height: 48px;
+                padding: 12px 16px;
+                border-radius: 0.5rem;
+                background-color: var(--white);
+                border: none;
+                outline: none;
+                box-shadow: none;
+                margin-right: 20px;
+            }
+            button {
+                width: 140px;
+            }
+        }
+    }
+    .bottom-footer {
+        position: relative;
+        margin-top: -40px;
+        margin-bottom: 46px;
+        .for-line-ellips{
+          max-width: 300px;
+          width: 100%;
+          display: -webkit-box;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          margin-top: 16px;
+        }
+        .footer-heading{
+          margin: 30px 0px 16px 0px;
+        }
+        .footer-link {
+            display: block;
+            text-decoration: none;
+            font-size: 14px;
+            color: var(--black45);
+            cursor: pointer;
+            margin-bottom: 14px;
+        }
+    }
+    .bottom-footer-social{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--graye8);
+      padding: 20px 0px;
+      .footer-link {
+          display: inline-block;
+          text-decoration: none;
+          font-size: 14px;
+          color: var(--black45);
+          cursor: pointer;
+      }
+      .social-icon{
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+        margin-left: 16px;
+        cursor: pointer;
+        transition: all 300ms;
+        &:hover{
+          transform: translateY(-3px);
+        }
+      }
+    }
+}

@@ -1,9 +1,11 @@
 import { useState } from "react";
 // Styles Imports
 import * as Colors from '../../../../assets/styles/Colors';
-import { PrimaryLarge } from '../../../../assets/styles/Buttons';
-import { Heading1B, LabelInput, LabelWrapper, Body } from '../../../../assets/styles/Labels';
-import { POPUP_TYPE } from '../../../../Helpers/Enums'
+import { PrimaryLarge,PrimaryOutlineSmall  } from '../../../../assets/styles/Buttons';
+import { Heading1B,Heading4B, LabelInput, LabelWrapper, Body } from '../../../../assets/styles/Labels';
+import { POPUP_TYPE } from '../../../../Helpers/Enums';
+// import header
+import FHeader from '../../../Layout/FHeader/FHeader';
 // Scss Imports
 import './../SignUp.scss';
 // Pages Imports
@@ -35,11 +37,13 @@ function FirstStep(props) {
 
 return (
 
-    <div className="auth-holder">
-      <Grid container justifyContent="center" direction="column" alignItems="center">
-        <Grid item xs={4} pt={'60px'}>
-          <div className="auth-box">
-            <img src={authLogo} className="auth-top-logo" alt="" />
+  <>
+  <FHeader />
+  <div className="auth-holder">
+    <Grid container justifyContent="center" direction="column" alignItems="center">
+      <Grid item xs={12} pt={'0px'}>
+        <div className="auth-box">
+          {/*<img src={authLogo} className="auth-top-logo" alt='pics' />*/}
             <Heading1B text={strings.firstEnterYourEmail} color={Colors.black1d} padding={'0 0 8px 0'} textAlign={'center'} />
             <LabelWrapper justifyContent={'center'} padding={'0 0 30px 0'} textAlign={'center'}>
               <Body text={strings.weSuggestUsingThe} color={Colors.black45} padding={'0 2px'} />
@@ -57,21 +61,23 @@ return (
                 <LabelInput className="ipnputlabel" color={Colors.error} text={strings.enterAValidEmailAddress}></LabelInput>
               </Box>
               <Box pt={'6px'}>
-               <PrimaryLarge text={strings.continue} color={Colors.white} onClick={handleClick} />
+                <PrimaryLarge text={strings.continue} color={Colors.white} onClick={handleClick} />
               </Box>
-              <Box display="flex" justifyContent="center" flexDirection="column" alignItems="center" pt={'50px'}>
-                <Body text={strings.areadyHaveAnAccount} color={Colors.gray61} />
-                <Body text={strings.loginToYourExistingAccount} color={Colors.primary} cursor={'pointer'} onClick={() => loginPopupOpen()} />
+              <Box className="alreay-login-bg">
+                <Box>
+                  <Heading4B text={strings.areadyHaveAnAccount} color={Colors.white} />
+                  <Heading4B text={strings.loginToYourExistingAccount} color={Colors.white}/>
+                </Box>
+                <PrimaryOutlineSmall text={strings.logIn} color={Colors.white}  onClick={() => loginPopupOpen()}  />
               </Box>
+
             </div>
           </div>
-        </Grid>
-        <Grid item xs={4}>
           <div className="auth-box-bottom">
-            <LabelWrapper padding={'90px 0 0 0'}>
-              <Body text={strings.privacyTerms} color={Colors.gray61} padding={'0 4px'} cursor={'pointer'} />
+            <LabelWrapper>
+              <Body text={strings.privacyTerms} color={Colors.gray61} padding={'0 4px'} cursor={'pointer'} fontSize={'12px'} />
               <Body text={'|'} color={Colors.gray61} padding={'0 2px'} />
-              <Body text={strings.contactUs} color={Colors.gray61} fontWeight={'600'} padding={'0 4px'} cursor={'pointer'} />
+              <Body text={strings.contactUs} color={Colors.gray61} padding={'0 4px'} cursor={'pointer'} fontSize={'12px'} />
             </LabelWrapper>
           </div>
         </Grid>
@@ -80,11 +86,11 @@ return (
           popupIsOpen={popupOpen}
           style={popupType}
           closePopup={() => setPopupOpen(false)}
-          
+
       />
-    
     </div>
 
+    </>
   )
 }
 

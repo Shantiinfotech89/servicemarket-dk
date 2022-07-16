@@ -21,6 +21,8 @@ export const MAIN_COMPONENTS_STATE = {
     PROFILE: "Profile",
     MY_EMPLOYEES: "my-employees",
     MANAGE_SERVICES: "manage-services",
+    SUBSCRIPTION: "subscription",
+    MY_SUBSCRIPTION: "my-subscription"
 }
 
 // All sidebars types the app has

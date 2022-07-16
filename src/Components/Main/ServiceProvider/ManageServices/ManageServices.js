@@ -1,7 +1,6 @@
 import * as React from 'react';
 // Styles Imports
 import * as Colors from '../../../../assets/styles/Colors';
-import { PrimaryLarge, CancelLarge } from '../../../../assets/styles/Buttons';
 import { Heading6S, Body } from '../../../../assets/styles/Labels';
 // Import scss
 import './ManageServices.scss';
@@ -22,11 +21,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
-import FormGroup from '@mui/material/FormGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
 
 // local strings Imports
 const strings = require('../../../../localisation_en.json')
