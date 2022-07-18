@@ -166,7 +166,10 @@
     "TrasactionDate":"Trasaction Date",
     "StartEndDate":"Start & End Date",
     "Price":"Price",
-    "Action":"Action"
+    "Action":"Action",
+    "ManageAvailability":"Manage Availability",
+    "Setyouravailabilityhere":"Set your availability here",
+    "holiday": "Holiday"
 
 
 }

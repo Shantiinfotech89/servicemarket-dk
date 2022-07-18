@@ -8,7 +8,6 @@ import FHeader from '../../../Layout/FHeader/FHeader';
 // Scss Imports
 import './../SignUp.scss';
 // Images Imports
-import authLogo from '../../../../assets/images/logo/auth-logo.svg';
 import infoCircleIcon  from '../../../../assets/images/structure/info-circle-outlined.svg';
 import reChapcha from '../../../../assets/images/product/reChapcha.png';
 // Material Ui Imports
@@ -20,21 +19,15 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import ListSubheader from '@mui/material/ListSubheader';
 import CheckIcon from '@mui/icons-material/Check';
-import OutlinedInput from '@mui/material/OutlinedInput';
 import ListItemText from '@mui/material/ListItemText';
 import Autocomplete from '@mui/material/Autocomplete';
-import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import { useHistory } from 'react-router-dom';
 // local strings Imports
-const strings = require('../../../../localisation_en.json')
-const names = [
-  'Nails',
-  'Makeup',
-  'Haircut',
-];
-// Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
+const strings = require('../../../../localisation_en.json');
+
 const ChooseAddress = [
   { label: '1901 Thornridge Cir. Shiloh, Hawaii 81063'},
   { label: '1901 Thornridge Cir. Shiloh, Hawaii 81063'},
@@ -129,7 +122,7 @@ return (
 
               <Grid item xs={6}>
                   <Box className="form-group">
-                    <FormControl className='selectfield' required variant="filled" sx={{ m: 1, minWidth: 120 }}>
+                    <FormControl className='selectfield' required variant="filled" >
                       <InputLabel id="country-filled-label">{strings.country}</InputLabel>
                       <Select
                         labelId="country-filled-label"
@@ -151,17 +144,33 @@ return (
                         <Select
                           labelId="demo-simple-select-filled-label"
                           id="demo-simple-select-filled"
-
+                          multiple
                           value={fCategory}
                           onChange={handleChange}
                           renderValue={(selected) => selected.join(', ')}
                         >
-                        {names.map((name) => (
-                          <MenuItem key={name} value={name}>
-                            <Checkbox checked={fCategory.indexOf(name) > -1} />
-                            <ListItemText primary={name} />
+                          <ListSubheader>Salon</ListSubheader>
+                          <MenuItem value={'Nails'}>
+                            <Checkbox  />
+                            <ListItemText primary={'Nails'} />
                           </MenuItem>
-                        ))}
+                          <MenuItem value={'Makeup'}>
+                            <Checkbox  />
+                            <ListItemText primary={'Makeup'} />
+                          </MenuItem>
+                          <MenuItem value={'Haircut'}>
+                            <Checkbox  />
+                            <ListItemText primary={'Haircut'} />
+                          </MenuItem>
+                          <ListSubheader>Spa</ListSubheader>
+                          <MenuItem value={'Ayurvedic spa'}>
+                            <Checkbox  />
+                            <ListItemText primary={'Ayurvedic spa'} />
+                          </MenuItem>
+                          <MenuItem value={'Thai Spa'}>
+                            <Checkbox  />
+                            <ListItemText primary={'Thai Spa'} />
+                          </MenuItem>
                         </Select>
                       </FormControl>
                       <Tooltip title="Lorem ipsum dolor sit amet elit. Nullam nulla sit sed leo." arrow className="info-box">
@@ -171,7 +180,7 @@ return (
               </Grid>
               <Grid item xs={6}>
                 <Box className="form-group add-info-tool">
-                  <FormControl className='selectfield' required variant="filled" sx={{ m: 1, width: 300 }}>
+                  <FormControl className='selectfield' required variant="filled">
                     <InputLabel id="demo-multiple-checkbox-label">{strings.serviceCategory}</InputLabel>
                     <Select
                       labelId="demo-multiple-checkbox-label"
@@ -181,12 +190,28 @@ return (
                       onChange={handleChange2}
                       renderValue={(selected) => selected.join(', ')}
                     >
-                      {names.map((name) => (
-                        <MenuItem key={name} value={name}>
-                          <Checkbox checked={sCategory.indexOf(name) > -1} />
-                          <ListItemText primary={name} />
+                        <ListSubheader>Salon</ListSubheader>
+                        <MenuItem value={'Nails'}>
+                          <Checkbox  />
+                          <ListItemText primary={'Nails'} />
                         </MenuItem>
-                      ))}
+                        <MenuItem value={'Makeup'}>
+                          <Checkbox  />
+                          <ListItemText primary={'Makeup'} />
+                        </MenuItem>
+                        <MenuItem value={'Haircut'}>
+                          <Checkbox  />
+                          <ListItemText primary={'Haircut'} />
+                        </MenuItem>
+                        <ListSubheader>Spa</ListSubheader>
+                        <MenuItem value={'Ayurvedic spa'}>
+                          <Checkbox  />
+                          <ListItemText primary={'Ayurvedic spa'} />
+                        </MenuItem>
+                        <MenuItem value={'Thai Spa'}>
+                          <Checkbox  />
+                          <ListItemText primary={'Thai Spa'} />
+                        </MenuItem>
                     </Select>
                     <Tooltip title="Lorem ipsum dolor sit amet elit. Nullam nulla sit sed leo." arrow className="info-box">
                       <img src={infoCircleIcon} alt=".."  />

@@ -1,3 +1,17 @@
+.MuiButton-containedPrimary{
+    background: linear-gradient(96.22deg,#13E173 27.28%,#02CDFF 110.27%);
+    border-radius: 8px !important;
+    padding: 5px 16px 6.5px 16px !important;
+    text-transform: capitalize !important;
+    font-weight: 600 !important;
+    .plus-icon{
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+        margin-right: 8px;
+    }
+}
+
 .textfield {
     margin: 0 0 24px 0 !important;
     width: 100% !important;
@@ -171,10 +185,28 @@
 .MuiPopover-paper,
 .MuiAutocomplete-paper {
     border: 1px solid var(--graybb) !important;
+    border-radius: 0.5rem !important;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-color: var(--graye8) transparent;
+    scrollbar-width: thin;
+    &::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+        background-color: transparent;
+        border-radius: 2px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--graye8);
+        border-radius: 2px;
+    }
+    &::-webkit-scrollbar-track {
+        border: 0.0625rem solid transparent;
+        border-radius: 2px;
+    }
     .MuiList-padding {
         padding: 0 0 !important;
         .MuiMenuItem-root {
-            padding: 14px 20px !important;
+            padding: 10px 20px !important;
             border-bottom: 1px solid var(--graybb) !important;
             display: flex;
             align-items: center;
@@ -201,6 +233,12 @@
             .MuiCheckbox-colorPrimary {
                 padding: 0px 10px 0px 0px;
             }
+        }
+        .MuiListSubheader-root{
+            border-bottom: 1px solid var(--graybb) !important;
+            font-size: 14px !important;
+            color: var(--gray61) !important;
+            font-weight: 700 !important;
         }
     }
 }
@@ -418,6 +456,16 @@
         height: 80px;
         padding: 16px 20px;
         border-top: 1px solid var(--grayf8);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .icon48{
+            width: 48px;
+            height: 48px;
+            margin-right: 12px;
+            cursor: pointer;
+            display: block;
+        }
     }
 }
 
