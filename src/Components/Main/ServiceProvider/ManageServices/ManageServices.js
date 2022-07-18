@@ -8,8 +8,8 @@ import './ManageServices.scss';
 
 import Pagination from '../../../../GlobalModule/Pagination/Pagination';
 // Images Imports
-import myInputSearchIcon from '../../../../assets/images/structure/inputsearch-icon.svg'
-import myButtonIcon from '../../../../assets/images/structure/me-button-icon.svg'
+import myInputSearchIcon from '../../../../assets/images/structure/inputsearch-icon.svg';
+import myButtonIcon from '../../../../assets/images/structure/plus-button-icon.svg';
 
 // Material Ui Imports
 import Box from '@mui/material/Box';

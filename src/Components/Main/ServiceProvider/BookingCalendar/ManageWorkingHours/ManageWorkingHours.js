@@ -1,15 +1,15 @@
 import * as React from 'react';
 // Styles Imports
-import * as Colors from '../../../../assets/styles/Colors';
-import { PrimaryLarge, CancelLarge } from '../../../../assets/styles/Buttons';
-import { Heading6S, Body } from '../../../../assets/styles/Labels';
+import * as Colors from '../../../../../assets/styles/Colors';
+import { PrimaryLarge, CancelLarge } from '../../../../../assets/styles/Buttons';
+import { Heading6S, Body } from '../../../../../assets/styles/Labels';
 // Import scss
-import './BookingCalendar.scss';
+import './ManageWorkingHours.scss';
 // Import Pages
 
 // Images Imports
-import addCirclePlusBlue from '../../../../assets/images/structure/add_circle-plus-blue.svg'
-import removeCircleRed from '../../../../assets/images/structure/emove_circle-red.svg'
+import addCirclePlusBlue from '../../../../../assets/images/structure/add_circle-plus-blue.svg'
+import removeCircleRed from '../../../../../assets/images/structure/emove_circle-red.svg'
 // Material Ui Imports
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -21,7 +21,7 @@ import Select from '@mui/material/Select';
 import CheckIcon from '@mui/icons-material/Check';
 
 // local strings Imports
-const strings = require('../../../../localisation_en.json')
+const strings = require('../../../../../localisation_en.json')
 
 function ManageWorkingHours(props) {
     const [starttime, setStartTime] = React.useState('');

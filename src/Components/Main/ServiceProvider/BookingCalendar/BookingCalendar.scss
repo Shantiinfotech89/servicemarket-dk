@@ -1,0 +1,25 @@
+.bookings-holder{
+    .booking-top-row{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 30px;
+        .MuiOutlinedInput-root{
+            margin-left: 16px;
+            .MuiInputBase-inputSizeSmall{
+                padding: 6.5px 32px 6.5px 14px !important;
+            }
+        }        
+        .MuiButton-containedPrimary{
+            margin-left: 16px;
+        }
+        .list-calender-icon{
+            margin-left: 16px;
+            cursor: pointer;
+        }
+    }
+
+    .fc-view-harness{
+        background-color: var(--white);
+    }
+}

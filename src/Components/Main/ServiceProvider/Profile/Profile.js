@@ -27,6 +27,8 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
+import ListSubheader from '@mui/material/ListSubheader';
+import ListItemText from '@mui/material/ListItemText';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -42,32 +44,29 @@ import PhoneInput from 'react-phone-input-2';
 // local strings Imports
 const strings = require('../../../../localisation_en.json');
 
-const names = [
-  'Nails',
-  'Makeup',
-  'Haircut',
-  'Nails lorem',
-  'Makeup lorem',
-  'Haircut lorem',
-];
 
 function Profile(props) {
-  const [fcategory, setFcategory] = React.useState('');
-  const handleChange = (event) => {
-    setFcategory(event.target.value);
-  };
-  
+  const [fCategory, setFcategory] = React.useState('');
+const handleChange = (event) => {
+  const {
+    target: { value },
+  } = event;
+  setFcategory(
+    // On autofill we get a stringified value.
+    typeof value === 'string' ? value.split(',') : value,
+  );
+};
 
-  const [category, setCategory] = React.useState([]);
-  const handleChange2 = (event) => {
-    const {
-      target: { value },
-    } = event;
-    setCategory(
-      // On autofill we get a stringified value.
-      typeof value === 'string' ? value.split(',') : value,
-    );
-  };
+const [sCategory, setSCategory] = React.useState([]);
+const handleChange2 = (event) => {
+  const {
+    target: { value },
+  } = event;
+  setSCategory(
+    // On autofill we get a stringified value.
+    typeof value === 'string' ? value.split(',') : value,
+  );
+};
 
   const [country, setCountry] = React.useState('');
   const handleChangeCountry = (event) => {
@@ -235,49 +234,85 @@ function Profile(props) {
                                     </Box>
                                 </Grid>
                                 <Grid item xs={6}>
-                                    <Box className="form-group add-info-tool">
-                                        <FormControl className='selectfield' required variant="filled">
-                                          <InputLabel id="demo-simple-select-filled-label">{strings.businessCategory}</InputLabel>
-                                          <Select
-                                            labelId="demo-simple-select-filled-label"
-                                            id="demo-simple-select-filled"
-                                            value={fcategory}
-                                            onChange={handleChange}
-                                          >
-                                            <MenuItem value={10}>Therapists <CheckIcon /></MenuItem>
-                                            <MenuItem value={20}>Salon <CheckIcon /></MenuItem>
-                                            <MenuItem value={30}>Spa <CheckIcon /></MenuItem>
-                                          </Select>
-                                        </FormControl>
-                                        <Tooltip title="Lorem ipsum dolor sit amet elit. Nullam nulla sit sed leo." arrow className="info-box">
-                                          <img src={infoCircleIcon} alt=".."  />
-                                        </Tooltip>
-                                    </Box>
+                                  <Box className="form-group add-info-tool">
+                                    <FormControl className='selectfield' required variant="filled">
+                                      <InputLabel id="demo-simple-select-filled-label">{strings.businessCategory}</InputLabel>
+                                      <Select
+                                        labelId="demo-simple-select-filled-label"
+                                        id="demo-simple-select-filled"
+                                        
+                                        value={fCategory}
+                                        onChange={handleChange}
+                                        renderValue={(selected) => selected.join(', ')}
+                                      >
+                                        <ListSubheader>Salon</ListSubheader>
+                                        <MenuItem value={'Nails'}>
+                                          <Checkbox  />
+                                          <ListItemText primary={'Nails'} />
+                                        </MenuItem>
+                                        <MenuItem value={'Makeup'}>
+                                          <Checkbox  />
+                                          <ListItemText primary={'Makeup'} />
+                                        </MenuItem>
+                                        <MenuItem value={'Haircut'}>
+                                          <Checkbox  />
+                                          <ListItemText primary={'Haircut'} />
+                                        </MenuItem>
+                                        <ListSubheader>Spa</ListSubheader>
+                                        <MenuItem value={'Ayurvedic spa'}>
+                                          <Checkbox  />
+                                          <ListItemText primary={'Ayurvedic spa'} />
+                                        </MenuItem>
+                                        <MenuItem value={'Thai Spa'}>
+                                          <Checkbox  />
+                                          <ListItemText primary={'Thai Spa'} />
+                                        </MenuItem>
+                                      </Select>
+                                    </FormControl>
+                                    <Tooltip title="Lorem ipsum dolor sit amet elit. Nullam nulla sit sed leo." arrow className="info-box">
+                                      <img src={infoCircleIcon} alt=".."  />
+                                    </Tooltip>
+                                </Box>
                                 </Grid>
                                 <Grid item xs={6}>
                                   <Box className="form-group add-info-tool">
-                                      <FormControl className='selectfield' required variant="filled">
-                                        <InputLabel id="demo-simple-select-filled-label">{strings.secondaryCategory}</InputLabel>
-                                        <Select
-                                          labelId="demo-simple-select-filled-label"
-                                          id="demo-simple-select-filled"
-                                          multiple
-                                          value={category}
-                                          onChange={handleChange2}
-                                        >
-                                          {names.map((name) => (
-                                            <MenuItem
-                                              key={name}
-                                              value={name}
-                                            >
-                                              {name}
-                                            </MenuItem>
-                                            ))}
-                                        </Select>
-                                        <Tooltip title="Lorem ipsum dolor sit amet elit. Nullam nulla sit sed leo." arrow className="info-box">
-                                          <img src={infoCircleIcon} alt=".."  />
-                                        </Tooltip>
-                                      </FormControl>
+                                    <FormControl className='selectfield' required variant="filled">
+                                      <InputLabel id="demo-multiple-checkbox-label">{strings.serviceCategory}</InputLabel>
+                                      <Select
+                                        labelId="demo-multiple-checkbox-label"
+                                        id="demo-multiple-checkbox"
+                                        multiple
+                                        value={sCategory}
+                                        onChange={handleChange2}
+                                        renderValue={(selected) => selected.join(', ')}
+                                      >
+                                          <ListSubheader>Salon</ListSubheader>
+                                          <MenuItem value={'Nails'}>
+                                            <Checkbox  />
+                                            <ListItemText primary={'Nails'} />
+                                          </MenuItem>
+                                          <MenuItem value={'Makeup'}>
+                                            <Checkbox  />
+                                            <ListItemText primary={'Makeup'} />
+                                          </MenuItem>
+                                          <MenuItem value={'Haircut'}>
+                                            <Checkbox  />
+                                            <ListItemText primary={'Haircut'} />
+                                          </MenuItem>
+                                          <ListSubheader>Spa</ListSubheader>
+                                          <MenuItem value={'Ayurvedic spa'}>
+                                            <Checkbox  />
+                                            <ListItemText primary={'Ayurvedic spa'} />
+                                          </MenuItem>
+                                          <MenuItem value={'Thai Spa'}>
+                                            <Checkbox  />
+                                            <ListItemText primary={'Thai Spa'} />
+                                          </MenuItem>
+                                      </Select>
+                                      <Tooltip title="Lorem ipsum dolor sit amet elit. Nullam nulla sit sed leo." arrow className="info-box">
+                                        <img src={infoCircleIcon} alt=".."  />
+                                      </Tooltip>
+                                    </FormControl>
                                   </Box>
                                 </Grid>
                                 <Grid item xs={6}>

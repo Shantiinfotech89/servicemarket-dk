@@ -1,10 +1,12 @@
-import  React,{useState} from 'react';
+import  React from 'react';
 // Styles Imports
 // import * as Colors from '../../../../../assets/styles/Colors';
 import {  Heading5B,  } from '../../assets/styles/Labels';
 import { PrimaryLarge} from '../../assets/styles/Buttons';
 // Images Imports
-import SidebarClose from '../../assets/images/structure/modal-close-icon.svg'
+import SidebarClose from '../../assets/images/structure/modal-close-icon.svg';
+import deleteIcon from '../../assets/images/structure/delete-icon.svg';
+import sendIcon from '../../assets/images/structure/send-icon.svg';
 // Imports Material Ui
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
@@ -97,7 +99,8 @@ function AddEmployee(props) {
 
       </Box>
       <Box className="sidebar-footer">
-
+        <img src={deleteIcon} alt="..." className='icon48' />
+        <img src={sendIcon} alt="..." className='icon48' />
         <PrimaryLarge text={strings.save} />
       </Box>
     </Box>

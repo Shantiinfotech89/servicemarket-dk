@@ -15,6 +15,7 @@ import LogoutModal from './Childs/LogoutModal/LogoutModal';
 import CancelSubscription from './Childs/CancelSubscription/CancelSubscription';
 import UpdateChangeCard from './Childs/UpdateChangeCard/UpdateChangeCard';
 import ChatComfirmationModal from './Childs/ChatComfirmationModal/ChatComfirmationModal';
+import ManageAvailability from './Childs/ManageAvailability/ManageAvailability';
 import PaymentSubscription from './Childs/PaymentSubscription/PaymentSubscription';
 
 // local strings Imports
@@ -113,6 +114,13 @@ function AllPopups(props) {
             closePopup={() => props.closePopup()}
             popupIsOpen={props.popupOpen}
           />
+        );     
+        case POPUP_TYPE.MANAGE_AVAILABILITY:
+        return(
+          <ManageAvailability
+            closePopup={() => props.closePopup()}
+            popupIsOpen={props.popupOpen}
+          />
         );
       case POPUP_TYPE.PAYMENT_SUBSCRIPTION:
         return(
@@ -120,7 +128,7 @@ function AllPopups(props) {
             closePopup={() => props.closePopup()}
             popupIsOpen={props.popupOpen}
           />
-        );
+        );  
     }
   }
 

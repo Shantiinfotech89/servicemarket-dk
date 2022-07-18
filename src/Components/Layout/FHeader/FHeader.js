@@ -17,15 +17,9 @@ import notificationIcon from '../../../assets/images/structure/notification-icon
 // Import Material UI
 import React, {useState} from 'react';
 import { useHistory } from "react-router-dom";
-import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import { Progress } from 'react-sweet-progress';
-import InputLabel from '@mui/material/InputLabel';
-import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import "react-sweet-progress/lib/style.css";
 

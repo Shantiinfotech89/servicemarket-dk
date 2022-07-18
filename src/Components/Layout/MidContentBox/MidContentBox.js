@@ -9,6 +9,7 @@ import Header from '../../Layout/Header/Header';
 import Sidebar from '../../Layout/Sidebar/Sidebar';
 import Dashboard from '../../../Components/Main/ServiceProvider/Dashboard/Dashboard';
 import BookingCalendar from '../../../Components/Main/ServiceProvider/BookingCalendar/BookingCalendar';
+import ManageWorkingHours from '../../../Components/Main/ServiceProvider/BookingCalendar/ManageWorkingHours/ManageWorkingHours';
 import ManageServices from '../../../Components/Main/ServiceProvider/ManageServices/ManageServices';
 import MyEmployees from '../../../Components/Main/ServiceProvider/MyEmployees/MyEmployees';
 import MySubscription from '../../../Components/Main/ServiceProvider/MySubscription/MySubscription';
@@ -56,6 +57,9 @@ function MidContentBox(props) {
           case MAIN_COMPONENTS_STATE.BOOKINGCALENDAR:
             return renderBookingCalendar();
 
+          case MAIN_COMPONENTS_STATE.MANAGEWORKINGHOURS:
+            return renderManageWorkingHours();
+
           case MAIN_COMPONENTS_STATE.MANAGE_SERVICES:
             return renderManageServices();
 
@@ -82,6 +86,9 @@ function MidContentBox(props) {
     function renderBookingCalendar() {
         return <BookingCalendar />
     }
+    function renderManageWorkingHours() {
+      return <ManageWorkingHours />
+  }
     function renderManageServices() {
       return <ManageServices />
     }
