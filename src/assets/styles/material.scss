@@ -45,14 +45,21 @@
         border: 2px solid var(--primary);
     }
     &.textareafield {
+        .MuiInputBase-formControl {
+            padding-top: 24px;
+        }
         .MuiInputBase-formControl::before {
             height: 85px;
+            bottom: auto;
+            top: 0px;
             border-radius: 8px !important;
             border: 1px solid var(--graybb) !important;
         }
         .MuiInputBase-formControl::after {
             height: 85px;
-        }
+            bottom: auto;
+            top: 0px;
+        }       
     }
 }
 
@@ -179,6 +186,36 @@
       height: 24px;
     }
   }
+}
+
+.form-group.gray-left-form{
+    .MuiSelect-select{
+        padding-left:80px !important;
+    }
+    .MuiSvgIcon-root{
+        left:55px !important;
+    }
+    .gray-left-box{
+        position:absolute;
+        left: 2px;
+        top:2px;
+        width: 48px;
+        height: 52px;
+        background-color: var(--grayf8);
+        border-right: 1px solid var(--graybb);
+        border-radius: .5rem 0px 0px .5rem;
+        z-index: 1;
+        object-fit: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .MuiInputBase-formControl{
+        padding-left: 50px !important;
+    }
+    .MuiInputLabel-root{
+        left: 50px;
+    }
 }
 
 

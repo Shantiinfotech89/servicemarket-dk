@@ -39,7 +39,7 @@ function BookingCalendar(props) {
     
     return(
         <>
-        <div className='mmh-container'>
+        {/* <div className='mmh-container'>
              <div className='bookings-holder'>
                 <Box className='booking-top-row'>
                     <Select size="small"
@@ -66,9 +66,9 @@ function BookingCalendar(props) {
                 </Box>            
                 <CalenderView />
             </div> 
-            </div>
+        </div> */}
 
-            <ManageWorkingHours />
+        <ManageWorkingHours />
         </>
     )   
 }

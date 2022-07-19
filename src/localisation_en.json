@@ -169,7 +169,9 @@
     "Action":"Action",
     "ManageAvailability":"Manage Availability",
     "Setyouravailabilityhere":"Set your availability here",
-    "holiday": "Holiday"
+    "holiday": "Holiday",
+    "ServiceName": "Service Name",
+    "ServiceDescription": "Service Description"
 
 
 }

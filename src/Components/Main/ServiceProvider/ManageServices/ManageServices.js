@@ -1,7 +1,11 @@
-import * as React from 'react';
+import  React,{useState} from 'react';
 // Styles Imports
 import * as Colors from '../../../../assets/styles/Colors';
 import { Heading6S, Body } from '../../../../assets/styles/Labels';
+
+import { SIDEBAR_TYPE } from '../../../../Helpers/Enums';
+
+import AllSideBar from '../../../../SideBar/AllSideBar';
 // Import scss
 import './ManageServices.scss';
 // Import Pages
@@ -83,8 +87,16 @@ const strings = require('../../../../localisation_en.json')
     },
   }));
 
+
 function ManageServices(props) {
 
+  const [sidebarOpen, setSideBarOpen] = useState(false);
+  const [sidebarType, setSideBarType] = useState("");
+
+  function addServiceOpen() {
+    setSideBarType(SIDEBAR_TYPE.ADD_SERVICE);
+    setSideBarOpen(true);
+  }
     return(
         <div className='mmh-container'>
             <div className='my-employees-holder'>
@@ -96,7 +108,7 @@ function ManageServices(props) {
                             <img src={myInputSearchIcon} className='me-inputsearch-icon' alt='icons' />
                         </div>
                         <div className='me-button-box'>
-                            <button className='me-button'><img src={myButtonIcon} className='me-button-icon' alt='icons' /> <Body text={strings.service} color={Colors.white} padding={'0 0 0 8px'} /> </button>
+                            <button className='me-button' onClick={() => addServiceOpen()}><img src={myButtonIcon} className='me-button-icon' alt='icons' /> <Body text={strings.service} color={Colors.white} padding={'0 0 0 8px'} /> </button>
                         </div>
                     </Box>
                 </Box>
@@ -137,7 +149,11 @@ function ManageServices(props) {
                     <Pagination />
                 </Box>
             </div>
-           
+            <AllSideBar
+                sidebarIsOpen={sidebarOpen}
+                style={sidebarType}
+                closeSideBar={() => setSideBarOpen(false)}
+            />
         </div>
     )
 }
